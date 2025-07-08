@@ -1,0 +1,10 @@
+{
+  "weights": {
+    "semantic_clarity": 0.2,
+    "stylistic_convention": 0.15,
+    "length_appropriateness": 0.1,
+    "natural_language_readability": 0.15,
+    "domain_relevance": 0.2,
+    "syntactic_role_conformity": 0.2
+  }
+}
