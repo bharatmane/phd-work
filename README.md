@@ -1,7 +1,7 @@
 # 🧠 PhD Workspace – Identifier Readability & Program Comprehension
 
 [![Kaggle Dataset](https://img.shields.io/badge/Kaggle-Dataset-blue?logo=kaggle)](https://www.kaggle.com/datasets/bharatmane/multi-language-open-source-identifier-dataset)
-[![GitHub Stars](https://img.shields.io/github/stars/bharatmane/phd-identifier-readability?style=social)](https://github.com/bharatmane/phd-identifier-readability/stargazers)
+[![GitHub Stars](https://img.shields.io/github/stars/bharatmane/phd-workspace?style=social)](https://github.com/bharatmane/phd-workspace/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 Welcome! This repository is part of my PhD research in *program comprehension*, focusing on **identifier readability** across major programming languages (Java, Python, C#, JavaScript, and TypeScript).
