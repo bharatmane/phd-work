@@ -1,0 +1,6 @@
+{
+    "sonarlint.connectedMode.project": {
+        "connectionId": "craftsmanship",
+        "projectKey": "bharatmane_pp"
+    }
+}
