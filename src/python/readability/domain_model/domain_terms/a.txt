@@ -1,0 +1,36 @@
+ Volume in drive C has no label.
+ Volume Serial Number is BEBB-7B45
+
+ Directory of C:\Users\bhara\source\repos\phd-work\src\python\readability\domain_model\domain_terms
+
+10-07-2025  07:55    <DIR>          .
+10-07-2025  07:17    <DIR>          ..
+10-07-2025  07:55                 0 a.txt
+10-07-2025  07:48             7,972 angular-cli.csv
+09-07-2025  20:08             1,794 Angular.csv
+09-07-2025  20:15             3,333 Autofac.csv
+10-07-2025  07:51    <DIR>          bk
+10-07-2025  07:42             4,084 commons-lang.csv
+09-07-2025  20:10             1,324 d3.csv
+09-07-2025  20:15             1,321 Dapper.csv
+09-07-2025  20:15             2,472 django.csv
+09-07-2025  20:10             1,382 express.csv
+09-07-2025  20:12             1,612 flask.csv
+09-07-2025  20:13             2,001 guava.csv
+09-07-2025  20:14             2,479 Hangfire.csv
+10-07-2025  07:43             1,141 hibernate-orm.csv
+09-07-2025  20:14             3,231 IdentityServer.csv
+09-07-2025  20:10             2,428 lodash.csv
+09-07-2025  20:13             2,469 logging-log4j2.csv
+09-07-2025  20:08             1,779 NestJS.csv
+10-07-2025  07:52             4,792 ngx-bootstrap.csv
+10-07-2025  07:35               789 NLog.csv
+09-07-2025  20:12             1,560 numpy.csv
+09-07-2025  20:11             1,432 pandas.csv
+10-07-2025  07:53             4,781 react.csv
+09-07-2025  20:11             1,225 requests.csv
+10-07-2025  07:54             4,629 spring-framework.csv
+10-07-2025  07:35               807 TypeScript.csv
+10-07-2025  07:55             1,201 vue.csv
+              26 File(s)         62,038 bytes
+               3 Dir(s)  723,597,500,416 bytes free

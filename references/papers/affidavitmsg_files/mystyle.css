@@ -1,0 +1,373 @@
+
+
+body { 
+
+font-family:Lucida Sans, Arial, Helvetica, Sans-Serif; font-size:13px;margin-top:0px;margin-left:5px;
+
+}
+
+
+
+#header { 
+
+ BORDER-RIGHT: medium none;
+
+ BORDER-TOP: medium none;
+
+ 
+
+ MARGIN: 0px 0px 10px;
+
+ BORDER-LEFT: medium none;
+
+ WIDTH: 100%;
+
+ BORDER-BOTTOM: medium none;
+
+ BACKGROUND-REPEAT: no-repeat;
+
+ BACKGROUND-COLOR: transparent;
+
+ TEXT-ALIGN: center
+
+}
+
+
+
+fieldset { 
+
+border:solid 1px #000;
+
+text-align:left;
+
+background-color:#EBEBFF;
+
+padding-top: 0px;
+
+padding-left: 0px;
+
+padding-right: 0px;
+
+width:100%; 
+
+}
+
+
+
+h2 { 
+
+font-size:20px; margin:0px; padding:5px 5px; color:#ffffff; font-weight:bold;background-color:#0A70BC;height:35px;
+
+}
+
+
+
+label { 
+
+font-size:15px; 
+
+padding: 5px 14px;
+
+
+
+}
+
+
+
+
+
+fieldset table tr td {
+
+    text-align: left;
+
+    text-decoration: none;
+
+    padding-bottom: 10px;
+
+}
+
+
+
+fieldset .textbox1 {
+
+    width: 450px;
+
+    float: left;
+
+}
+
+fieldset .textbox2 {
+
+    width: 400px;
+
+    float: left;
+
+}
+
+
+fieldset .reqd{ 
+
+background-image: url(images/reqd.png);
+
+background-repeat: no-repeat;
+
+padding-left:15px;
+
+}
+
+
+
+
+
+
+
+
+
+fieldset .ajdustwidthstdcode {
+
+    width: 40px;
+
+    float: left;
+
+    border-right: 1px #ffffff solid;
+
+    margin-right: 3px;
+
+    text-align: center;
+
+}
+
+
+
+fieldset .ajdustwidthtitle {
+
+    width: 50px;
+
+    border-right: 1px #000000 solid;
+
+    float: left;
+
+    margin-right: 3px;
+
+    text-align: center;
+
+    height:28px;
+
+}
+
+
+
+fieldset .ajdustwidthsecond {
+
+    width: 405px;
+
+    border-right: 1px #000000 solid;
+
+    margin-right: 3px;
+
+    text-align: left;
+
+}
+
+fieldset .ajdustwidthsecond7 {
+
+    width: 454px;
+
+    border-right: 1px #000000 solid;
+
+    margin-right: 3px;
+
+    text-align: left;
+
+}
+
+
+
+
+
+
+
+.error {
+
+    background-image: url(images/error.png);
+
+    background-repeat: no-repeat;
+
+    background-color: #ffffff;
+
+	color: #000000;
+    border-color:black; 
+
+	-webkit-appearance: none;
+
+}
+
+
+
+.correct {
+
+	font-family: 'Ubuntu', sans-serif;
+
+    padding: 3px;
+
+    -moz-border-radius: 2px;
+
+    -webkit-border-radius: 2px;
+
+    border-color:black;
+
+    background-color: #ffffff;
+
+    color: #000000;
+
+}
+
+.errorr {
+
+     background-color: red;
+     color:green;
+    
+
+}
+
+
+
+.correctr {
+
+	font-family: 'Ubuntu', sans-serif;
+
+    padding: 3px;
+
+    -moz-border-radius: 2px;
+
+    -webkit-border-radius: 2px;
+
+    border: none;
+
+    background-color: #ffffff;
+
+    color: #000000;
+
+}
+
+fieldset input[type=text] {
+
+    padding: 3px;
+
+    -moz-border-radius: 2px;
+
+    -webkit-border-radius: 2px;
+
+    border-radius: 2px;
+
+    border: solid 1px;
+
+    background-color: #ffffff;
+
+    color: #000000;
+
+}
+
+
+
+fieldset select {
+
+    padding: 3px;
+
+    -moz-border-radius: 2px;
+
+    -webkit-border-radius: 2px;
+
+    border: solid 1px;
+
+    width: 450px;
+
+    background-color: #ffffff;
+
+    color: #000000;
+
+}
+/* CHANGHED BY VG */
+.prev, .next { background-color:#0000B2; padding:5px 10px; color:#fff; text-decoration:none;font-size:14px;font-weight:bold;
+
+}
+
+.prev:hover, .next:hover { 
+
+background-color:#000; text-decoration:none;
+
+}
+
+.prev { 
+
+top:200px;
+
+float:left;}
+
+.next {
+
+//position:absolute; 
+
+//top:250px;
+
+float:right;
+
+//right:150px;}
+
+
+
+#steps { 
+
+list-style:none; width:100%; overflow:hidden; margin:0px; padding:0px;
+
+}
+
+#steps li {
+
+font-size:18px; float:left; padding:10px; color:#b0b1b3;
+
+}
+
+#steps li span {
+
+font-size:11px; display:block;
+
+}
+
+#steps li.current { 
+
+color:#000;
+
+}
+
+#makeWizard { 
+
+background-color:#b0232a; color:#fff; padding:5px 10px; text-decoration:none; font-size:18px;
+
+}
+
+#makeWizard:hover { 
+
+background-color:#000;
+
+}
+
+
+
+fieldset .textbox111 {
+
+    width: 249px;
+
+    float: left;
+
+}
+
+
+
+ .reqd111 {
+
+    background-image: url(images/reqd.png);
+
+    background-repeat: no-repeat;
+
+    padding-left: 0px;}

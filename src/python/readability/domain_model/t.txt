@@ -1,0 +1,15 @@
+ Volume in drive C has no label.
+ Volume Serial Number is BEBB-7B45
+
+ Directory of C:\Users\bhara\source\repos\phd-work\src\python\readability\domain_model
+
+10-07-2025  07:17    <DIR>          .
+08-07-2025  19:54    <DIR>          ..
+09-07-2025  18:50             3,962 domain_lexicon.py
+09-07-2025  20:15    <DIR>          domain_terms
+03-07-2025  23:41               368 loader.py
+10-07-2025  07:17                 0 t.txt
+03-07-2025  23:41               326 trainer.py
+03-07-2025  23:41                 7 __init__.py
+               5 File(s)          4,663 bytes
+               3 Dir(s)  724,014,977,024 bytes free

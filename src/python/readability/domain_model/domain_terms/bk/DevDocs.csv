@@ -1,0 +1,134 @@
+Domain,Term,Type
+DevDocs,ACID,Noun
+DevDocs,AJAX,Noun
+DevDocs,API,Noun
+DevDocs,ASCII,Noun
+DevDocs,AST,Noun
+DevDocs,Abstract Syntax Tree,Noun
+DevDocs,Algorithm,Noun
+DevDocs,Android,Noun
+DevDocs,Angular,Noun
+DevDocs,Apache,Noun
+DevDocs,Array,Noun
+DevDocs,Assembly,Noun
+DevDocs,Asynchronous,Verb
+DevDocs,Authorization,Noun
+DevDocs,Backend,Noun
+DevDocs,Bash,Noun
+DevDocs,Big O,Noun
+DevDocs,Big Data,Noun
+DevDocs,Blockchain,Noun
+DevDocs,Boolean,Noun
+DevDocs,Branch,Noun
+DevDocs,Browser,Noun
+DevDocs,CLI,Noun
+DevDocs,CPU,Noun
+DevDocs,CSS,Noun
+DevDocs,CSS3,Noun
+DevDocs,CSharp,Noun
+DevDocs,C++,Noun
+DevDocs,Cache,Noun
+DevDocs,Cloud,Noun
+DevDocs,Code,Noun
+DevDocs,Compile,Verb
+DevDocs,Composer,Noun
+DevDocs,Concurrency,Noun
+DevDocs,Container,Noun
+DevDocs,Cookie,Noun
+DevDocs,Cybersecurity,Noun
+DevDocs,DBMS,Noun
+DevDocs,DNS,Noun
+DevDocs,DOM,Noun
+DevDocs,Data structure,Noun
+DevDocs,Database,Noun
+DevDocs,Debug,Verb
+DevDocs,Design pattern,Noun
+DevDocs,DevOps,Noun
+DevDocs,Docker,Noun
+DevDocs,Documentation,Noun
+DevDocs,Encryption,Noun
+DevDocs,Express,Noun
+DevDocs,FIFO,Noun
+DevDocs,FTP,Noun
+DevDocs,Frontend,Noun
+DevDocs,Functional programming,Noun
+DevDocs,Git,Noun
+DevDocs,GitHub,Noun
+DevDocs,Go (Golang),Noun
+DevDocs,GraphQL,Noun
+DevDocs,HTTP,Noun
+DevDocs,HTTP/2,Noun
+DevDocs,HTTPS,Noun
+DevDocs,Haskell,Noun
+DevDocs,Hibernate,Noun
+DevDocs,HTML,Noun
+DevDocs,HTML5,Noun
+DevDocs,Hardware,Noun
+DevDocs,Hash table,Noun
+DevDocs,Hashing,Noun
+DevDocs,Haskell,Noun
+DevDocs,Heroku,Noun
+DevDocs,Index,Noun
+DevDocs,Inheritance,Noun
+DevDocs,Input/Output,Noun
+DevDocs,Java,Noun
+DevDocs,JavaScript,Noun
+DevDocs,JSON,Noun
+DevDocs,Jupyter,Noun
+DevDocs,Kubernetes,Noun
+DevDocs,LINUX,Noun
+DevDocs,Library,Noun
+DevDocs,Linked list,Noun
+DevDocs,Load balancer,Noun
+DevDocs,ML,Noun
+DevDocs,Machine learning,Noun
+DevDocs,Microservice,Noun
+DevDocs,Module,Noun
+DevDocs,Multithreading,Noun
+DevDocs,MySQL,Noun
+DevDocs,NoSQL,Noun
+DevDocs,NP-hard,Noun
+DevDocs,Nginx,Noun
+DevDocs,OOP,Noun
+DevDocs,ORM,Noun
+DevDocs,Open source,Noun
+DevDocs,Operating system,Noun
+DevDocs,PHP,Noun
+DevDocs,Package manager,Noun
+DevDocs,Parallelism,Noun
+DevDocs,Performance,Noun
+DevDocs,Pointer,Noun
+DevDocs,Polymorphism,Noun
+DevDocs,PostgreSQL,Noun
+DevDocs,Protocol,Noun
+DevDocs,Python,Noun
+DevDocs,RAM,Noun
+DevDocs,REST,Noun
+DevDocs,RESTful,Noun
+DevDocs,Ruby,Noun
+DevDocs,Ruby on Rails,Noun
+DevDocs,Rust,Noun
+DevDocs,SaaS,Noun
+DevDocs,SQL,Noun
+DevDocs,SQL join,Noun
+DevDocs,SSL,Noun
+DevDocs,Stack,Noun
+DevDocs,Stack Overflow,Noun
+DevDocs,Thread,Noun
+DevDocs,Type,Noun
+DevDocs,UI,Noun
+DevDocs,UX,Noun
+DevDocs,Unicode,Noun
+DevDocs,Unix,Noun
+DevDocs,Virtual machine,Noun
+DevDocs,Web API,Noun
+DevDocs,Web server,Noun
+DevDocs,Web service,Noun
+DevDocs,Webpack,Noun
+DevDocs,YAML,Noun
+DevDocs,iOS,Noun
+DevDocs,performance optimization,Noun
+DevDocs,refactoring,Noun
+DevDocs,software architecture,Noun
+DevDocs,testing,Noun
+DevDocs,version control,Noun

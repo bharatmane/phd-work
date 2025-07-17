@@ -3,7 +3,7 @@ import json
 import pandas as pd
 import argparse
 from identifier_extractor.core import extract_identifiers
-from scoring.aggregate import score_identifier
+from readability.scoring.old_models.aggregate import score_identifier
 from domain_model.loader import DomainModel
 
 def analyze_code(code_path, model_path, config_path, output_prefix):
