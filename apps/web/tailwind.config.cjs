@@ -18,7 +18,7 @@ module.exports = {
         mesh: "radial-gradient(circle at top, rgba(103,232,249,0.18), transparent 28%), radial-gradient(circle at 80% 20%, rgba(251,113,133,0.14), transparent 20%), linear-gradient(180deg, #040916 0%, #08111f 45%, #050913 100%)",
       },
       fontFamily: {
-        display: ["Playfair Display", "Georgia", "serif"],
+        display: ["Inter", "system-ui", "sans-serif"],
         body: ["Inter", "system-ui", "sans-serif"],
       },
       keyframes: {

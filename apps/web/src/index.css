@@ -25,3 +25,15 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/* All font-display headings use Inter — clean sans-serif reads better
+   on dark backgrounds than the Playfair Display serif */
+.font-display {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+/* Boost body text contrast for extended reading */
+.text-slate-300 { color: rgb(210 218 230); }
+.text-slate-400 { color: rgb(168 180 196); }
