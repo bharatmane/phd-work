@@ -1,4 +1,9 @@
-*.pyc 
-src/python/gib_model.pki
-src/python/modeling/raw-data/*.*
-data/*.*
+node_modules/
+dist/
+.vite/
+
+site/node_modules/
+site/dist/
+site/.vite/
+
+legacy/phd-workspace/src/python/.venv/

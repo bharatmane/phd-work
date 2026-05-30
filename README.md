@@ -1,23 +1,13 @@
-# 🧠 PhD Workspace – Identifier Readability & Program Comprehension
+# PhD Research Portfolio
 
-[![Kaggle Dataset](https://img.shields.io/badge/Kaggle-Dataset-blue?logo=kaggle)](https://www.kaggle.com/datasets/bharatmane/multi-language-open-source-identifier-dataset)
-[![GitHub Stars](https://img.shields.io/github/stars/bharatmane/phd-workspace?style=social)](https://github.com/bharatmane/phd-workspace/stargazers)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+This repository now uses the root for the public website and keeps the prior research workspace archived under `legacy/phd-workspace/`.
 
-Welcome! This repository is part of my PhD research in *program comprehension*, focusing on **identifier readability** across major programming languages (Java, Python, C#, JavaScript, and TypeScript).
-...
-Welcome! This repository is part of my PhD research in *program comprehension*, focusing on **identifier readability** across major programming languages (Java, Python, C#, JavaScript, and TypeScript).
+## Legacy Workspace
 
-With over **23 years of industry experience** and a strong belief in software craftsmanship, my research aims to bridge the gap between code and cognition — helping developers write code they (and others) can be proud of.
+The previous PhD research materials, datasets, scripts, papers, and figures were preserved as-is in:
 
----
+- `legacy/phd-workspace/`
 
-## 📦 Dataset: Multi-language Open Source Identifier Dataset
+## Next Step
 
-I've built and released a carefully curated dataset of **362,000+ unique identifiers** extracted from high-quality open-source projects across four major languages. This dataset is designed to aid research in:
-
-- Identifier naming patterns  
-- Readability prediction models  
-- Cross-language analysis  
-- Program comprehension tooling  
-- Machine learning applications in SE
+Build the new static portfolio site at the repository root or in a dedicated app folder such as `site/`.
