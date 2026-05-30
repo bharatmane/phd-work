@@ -1,0 +1,30 @@
+TypeScript,@Decorator,Noun
+TypeScript,interface,Noun
+TypeScript,type,Noun
+TypeScript,enum,Noun
+TypeScript,generic,Noun
+TypeScript,union type,Noun
+TypeScript,intersection type,Noun
+TypeScript,type assertion,Noun
+TypeScript,type guard,Noun
+TypeScript,type inference,Noun
+TypeScript,readonly,Noun
+TypeScript,keyof,Noun
+TypeScript,typeof,Noun
+TypeScript,namespace,Noun
+TypeScript,module,Noun
+TypeScript,ambient declaration,Noun
+TypeScript,declaration file,Noun
+TypeScript,tuple,Noun
+TypeScript,never,Noun
+TypeScript,unknown,Noun
+TypeScript,any,Noun
+TypeScript,void,Noun
+TypeScript,as const,Noun
+TypeScript,satisfies,Noun
+TypeScript,implements,Verb
+TypeScript,extends,Verb
+TypeScript,declare,Verb
+TypeScript,overload,Verb
+TypeScript,type narrowing,Verb
+TypeScript,type predicate,Verb

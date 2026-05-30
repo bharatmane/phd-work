@@ -1,0 +1,69 @@
+Domain,Term,Type
+Flask,$ENV,Noun
+Flask,$app,Noun
+Flask,404.html,Noun
+Flask,Flask,Noun
+Flask,Flask Blueprint,Noun
+Flask,Flask-SQLAlchemy,Noun
+Flask,Flask.app,Noun
+Flask,HTTPException,Noun
+Flask,ItsDangerous,Noun
+Flask,Jinja2,Noun
+Flask,MarkupSafe,Noun
+Flask,NullSession,Noun
+Flask,Pallets,Noun
+Flask,Request,Noun
+Flask,Response,Noun
+Flask,SecureCookieSession,Noun
+Flask,Session,Noun
+Flask,SessionMixin,Noun
+Flask,View,Noun
+Flask,Werkzeug,Noun
+Flask,WSGI,Noun
+Flask,_app_ctx_stack,Noun
+Flask,_request_ctx_stack,Noun
+Flask,after_request,Verb
+Flask,app context,Noun
+Flask,application context,Noun
+Flask,app.py,Noun
+Flask,app_context,Verb
+Flask,app.run,Verb
+Flask,app.route,Verb
+Flask,blueprint,Noun
+Flask,config,Noun
+Flask,current_app,Noun
+Flask,current_app._get_current_object,Verb
+Flask,debug mode,Noun
+Flask,endpoint,Noun
+Flask,errorhandler,Noun
+Flask,flash,Verb
+Flask,g (flask.g),Noun
+Flask,jinja,Noun
+Flask,jinja2 template,Noun
+Flask,jsonify,Verb
+Flask,make_response,Verb
+Flask,render_template,Verb
+Flask,request,Noun
+Flask,request context,Noun
+Flask,request.form,Noun
+Flask,request.args,Noun
+Flask,request.method,Noun
+Flask,request.url,Noun
+Flask,request.files,Noun
+Flask,request.environ,Noun
+Flask,requests,Noun
+Flask,response,Noun
+Flask,route,Noun
+Flask,run,Verb
+Flask,secret key,Noun
+Flask,send_file,Verb
+Flask,session,Noun
+Flask,teardown_request,Noun
+Flask,template,Noun
+Flask,thread local,Noun
+Flask,threaded,Noun
+Flask,url_for,Verb
+Flask,werkzeug.Local,Noun
+Flask,werkzeug.exceptions,Noun
+Flask,with_appcontext,Verb
+Flask,wtforms,Noun

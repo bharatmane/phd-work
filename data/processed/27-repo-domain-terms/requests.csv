@@ -1,0 +1,52 @@
+Domain,Term,Type
+Requests,1XX,Noun
+Requests,2XX,Noun
+Requests,3XX,Noun
+Requests,4XX,Noun
+Requests,5XX,Noun
+Requests,Auth,Noun
+Requests,BasicAuth,Noun
+Requests,Bearer,Noun
+Requests,CA bundle,Noun
+Requests,Cert,Noun
+Requests,ChunkedEncodingError,Noun
+Requests,ConnectTimeout,Noun
+Requests,Connection pool,Noun
+Requests,ConnectionError,Noun
+Requests,DELETE,Verb
+Requests,GET,Verb
+Requests,HEAD,Verb
+Requests,HTTP,Noun
+Requests,HTTPBasicAuth,Noun
+Requests,HTTPError,Noun
+Requests,HTTPS,Noun
+Requests,HEAD,Verb
+Requests,JSON,Noun
+Requests,POST,Verb
+Requests,PUT,Verb
+Requests,ReadTimeout,Noun
+Requests,Request,Noun
+Requests,Requests,Noun
+Requests,Response,Noun
+Requests,Session,Noun
+Requests,Stack Overflow,Noun
+Requests,Status_code,Noun
+Requests,Timeout,Noun
+Requests,TooManyRedirects,Noun
+Requests,URI,Noun
+Requests,URL,Noun
+Requests,User-Agent,Noun
+Requests,Verify,Verb
+Requests,adapter,Noun
+Requests,allow_redirects,Noun
+Requests,certificate,Noun
+Requests,cookies,Noun
+Requests,headers,Noun
+Requests,proxies,Noun
+Requests,redirect,Verb
+Requests,request body,Noun
+Requests,response body,Noun
+Requests,sessions,Noun
+Requests,ssl,Noun
+Requests,stream,Verb
+Requests,verify,Verb

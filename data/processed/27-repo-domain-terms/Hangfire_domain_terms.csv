@@ -1,0 +1,205 @@
+Term,Frequency
+sql server,115
+background jobs,56
+cancellation tokens,52
+the degree,52
+another process,50
+ioc containers,49
+"a console application
+processing jobs",48
+"a windows service
+dealing",48
+placing processing,48
+"asp.net applications
+asp.net core applications
+
+
+configuration",47
+"dashboard ui
+configuring logging
+
+
+background methods",47
+"background
+calling methods",47
+passing arguments,47
+"batches
+
+
+background processing
+processing background jobs
+processing jobs",47
+"a web application
+processing jobs",47
+"job queues
+concurrency & rate limiting
+
+
+best practices
+deployment",47
+"performance counters
+
+
+extensibility",47
+"job filters
+
+
+tutorials",47
+"asp.net mvc
+highlighter tutorial
+
+
+upgrade guides
+upgrading",47
+"hangfire 1.7
+upgrading",47
+the cc,46
+writing unit tests,43
+"hangfire documentation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+overview
+
+
+pricing
+
+
+documentation
+
+
+forum
+
+
+blog
+
+
+ source code
+
+
+
+
+
+
+
+
+
+contents",38
+hangfire documentation,38
+your application,24
+> console,23
+background job,18
+the hangfire,17
+hangfire server,16
+background processing,14
+the application,13
+this case,13
+your background jobs,11
+sqlclient package,11
+the processing,10
+asp.net application,10
+the job,10
+a background job,10
+visual studio,10
+this method,9
+the dashboard,9
+the number,9
+the new version,9
+var options,8
+new backgroundjobserveroptions,8
+public void,8
+your project,8
+the project,8
+the storage,7
+the following way,7
+public class,7
+an exception,7
+a batch,7
+new backgroundjobserver,7
+the following options,7
+sqlserver package,7
+all your servers,7
+a lot,6
+a method,6
+console applications,6
+windows services,6
+some time,6
+the backgroundjobserver class,6
+"production
+making",6
+this feature,6
+a worker,6
+a user,6
+var batchid = batchjob,6
+a job,6
+backward compatibility,6
+asp.net core,6
+this package,6
+public static,6
+our application,6
+breaking changes,6
+performance counters,6
+the startup class,6
+integrated security=,6
+previous versions,6
+this release,6
+) => console,5
+application restarts,5
+an instance,5
+a web application,5
+no need,5
+the following example,5
+the following snippet,5
+our background jobs,5
+your app,5
+=> console,5
+pm> install-package hangfire,5
+the global.asax.cs file,5
+multiple queues,5
+a console application,5
+background job processing,5
+the following command,5
+install-package hangfire,5
+the package,5
+concurrency limiters,5
+the following method,5

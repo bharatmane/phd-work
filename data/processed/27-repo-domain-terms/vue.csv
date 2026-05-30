@@ -1,0 +1,62 @@
+Domain,Term,Type
+Vue,$attrs,Noun
+Vue,$data,Noun
+Vue,$el,Noun
+Vue,$emit,Verb
+Vue,$listeners,Noun
+Vue,$nextTick,Noun
+Vue,$options,Noun
+Vue,$props,Noun
+Vue,$refs,Noun
+Vue,$router,Noun
+Vue,$scopedSlots,Noun
+Vue,$slots,Noun
+Vue,$store,Noun
+Vue,$watch,Verb
+Vue,API,Noun
+Vue,Ajax,Noun
+Vue,App.vue,Noun
+Vue,CLI,Noun
+Vue,Component,Noun
+Vue,Composition API,Noun
+Vue,Composition API,Noun
+Vue,Directive,Noun
+Vue,Event Bus,Noun
+Vue,JSX,Noun
+Vue,KeepAlive,Noun
+Vue,Lifecycle hook,Noun
+Vue,MVVM,Noun
+Vue,Nuxt,Noun
+Vue,PWA,Noun
+Vue,Reactive,Verb
+Vue,ReactiveVar,Noun
+Vue,Reactivity,Noun
+Vue,SPA,Noun
+Vue,Single File Component,Noun
+Vue,Vue,Noun
+Vue,Vue CLI,Noun
+Vue,Vue Router,Noun
+Vue,Vue.js,Noun
+Vue,Vuex,Noun
+Vue,Watcher,Noun
+Vue,async components,Noun
+Vue,computed,Noun
+Vue,computed property,Noun
+Vue,data binding,Noun
+Vue,data option,Noun
+Vue,emits,Noun
+Vue,event binding,Noun
+Vue,front-end framework,Noun
+Vue,lazy loading,Noun
+Vue,methods,Noun
+Vue,nextTick,Noun
+Vue,props,Noun
+Vue,reactive,Verb
+Vue,ref,Noun
+Vue,render function,Noun
+Vue,setup,Verb
+Vue,slot,Noun
+Vue,state management,Noun
+Vue,template,Noun
+Vue,transition,Noun
+Vue,two-way binding,Noun

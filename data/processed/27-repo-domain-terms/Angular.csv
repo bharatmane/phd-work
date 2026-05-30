@@ -1,0 +1,71 @@
+Domain,Term,Type
+Angular,@Component,Noun
+Angular,@Directive,Noun
+Angular,@Injectable,Noun
+Angular,@Module,Noun
+Angular,@NgModule,Noun
+Angular,@Output,Noun
+Angular,@Pipe,Noun
+Angular,@ViewChild,Noun
+Angular,AOT,Noun
+Angular,Angular,Noun
+Angular,Angular 2+,Noun
+Angular,Angular CLI,Noun
+Angular,AngularJS,Noun
+Angular,AsyncPipe,Noun
+Angular,Attribute binding,Noun
+Angular,Attribute directive,Noun
+Angular,Binding,Noun
+Angular,ChangeDetectorRef,Noun
+Angular,ChangeDetectionStrategy,Noun
+Angular,Component,Noun
+Angular,Dependency Injection,Noun
+Angular,Directive,Noun
+Angular,Dispatcher,Noun
+Angular,FormsModule,Noun
+Angular,HTTPClient,Noun
+Angular,Ivy,Noun
+Angular,Lifecycle,Noun
+Angular,NgModule,Noun
+Angular,NgZone,Noun
+Angular,OnInit,Noun
+Angular,Pipe,Noun
+Angular,PlatformBrowser,Noun
+Angular,ReactiveFormsModule,Noun
+Angular,Renderer2,Noun
+Angular,RxJS,Noun
+Angular,Service,Noun
+Angular,Subject,Noun
+Angular,TemplateRef,Noun
+Angular,Transclusion,Noun
+Angular,TypeScript,Noun
+Angular,ViewChild,Noun
+Angular,ViewChildren,Noun
+Angular,Zone.js,Noun
+Angular,angular.json,Noun
+Angular,bootstrap (Angular bootstrap),Verb
+Angular,cli command,Noun
+Angular,decorator,Noun
+Angular,dependency injection,Noun
+Angular,event binding,Noun
+Angular,input property,Noun
+Angular,lazy loading,Noun
+Angular,module,Noun
+Angular,one-way binding,Noun
+Angular,routerLink,Noun
+Angular,structural directive,Noun
+Angular,template,Noun
+Angular,template syntax,Noun
+Angular,two-way binding,Noun
+Angular,typescript,Noun
+Angular,zone,Noun
+Angular,ng add,Verb
+Angular,ng build,Verb
+Angular,ng generate,Verb
+Angular,ng new,Verb
+Angular,ng serve,Verb
+Angular,ngFor,Noun
+Angular,ngIf,Noun
+Angular,ngOnInit,Noun
+Angular,ngOnDestroy,Noun
+Angular,ngSubmit,Noun

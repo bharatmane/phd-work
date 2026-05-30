@@ -1,0 +1,34 @@
+NLog,Logger,Noun
+NLog,LogManager,Noun
+NLog,LogLevel,Noun
+NLog,Target,Noun
+NLog,Layout,Noun
+NLog,LayoutRenderer,Noun
+NLog,Rule,Noun
+NLog,Config,Noun
+NLog,File Target,Noun
+NLog,Console Target,Noun
+NLog,Database Target,Noun
+NLog,AsyncWrapper,Noun
+NLog,BufferingWrapper,Noun
+NLog,FilteringWrapper,Noun
+NLog,JsonLayout,Noun
+NLog,Exception,Noun
+NLog,StackTrace,Noun
+NLog,GDC (Global Diagnostic Context),Noun
+NLog,MDLC (Mapped Diagnostic Context),Noun
+NLog,NDLC (Nested Diagnostic Context),Noun
+NLog,${message},Noun
+NLog,${level},Noun
+NLog,${logger},Noun
+NLog,${exception},Noun
+NLog,${date},Noun
+NLog,${threadid},Noun
+NLog,GetCurrentClassLogger,Verb
+NLog,Info,Verb
+NLog,Debug,Verb
+NLog,Warn,Verb
+NLog,Error,Verb
+NLog,Fatal,Verb
+NLog,Trace,Verb
+NLog,Configure,Verb

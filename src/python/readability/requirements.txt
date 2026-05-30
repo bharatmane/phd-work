@@ -1,7 +1,0 @@
-fasttext
-pandas
-nltk
-spacy
-tree_sitter
-tqdm
-scikit-learn

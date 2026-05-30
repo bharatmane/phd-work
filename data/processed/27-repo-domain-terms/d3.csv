@@ -1,0 +1,68 @@
+Domain,Term,Type
+D3,API,Noun
+D3,API reference,Noun
+D3,Arc,Noun
+D3,CSV,Noun
+D3,Chaining,Noun
+D3,Data join,Noun
+D3,Delaunay,Noun
+D3,Diverging scale,Noun
+D3,DOM,Noun
+D3,Delaunay triangulation,Noun
+D3,Density estimation,Noun
+D3,Drag behavior,Noun
+D3,Dynamically update,Verb
+D3,Enter selection,Noun
+D3,Exit selection,Noun
+D3,Force simulation,Noun
+D3,GeoJSON,Noun
+D3,HTML,Noun
+D3,JSON,Noun
+D3,JavaScript,Noun
+D3,Linear scale,Noun
+D3,Log scale,Noun
+D3,Ordinal scale,Noun
+D3,Pie layout,Noun
+D3,Projection,Noun
+D3,Radar chart,Noun
+D3,SVG,Noun
+D3,SVG path,Noun
+D3,Scale,Noun
+D3,ScaleBand,Noun
+D3,ScaleLinear,Noun
+D3,ScaleOrdinal,Noun
+D3,ScaleTime,Noun
+D3,Scatter plot,Noun
+D3,Selection,Noun
+D3,Sequential scale,Noun
+D3,Stack,Noun
+D3,Threshold scale,Noun
+D3,Tick,Noun
+D3,Time scale,Noun
+D3,Transition,Noun
+D3,Zoom,Noun
+D3,axis,Noun
+D3,axisBottom,Noun
+D3,axisLeft,Noun
+D3,bar chart,Noun
+D3,brush,Noun
+D3,chord diagram,Noun
+D3,click event,Noun
+D3,data binding,Noun
+D3,datum,Noun
+D3,drag,Verb
+D3,enter,Verb
+D3,exit,Verb
+D3,extent,Noun
+D3,force layout,Noun
+D3,hierarchy,Noun
+D3,interpolate,Verb
+D3,line generator,Noun
+D3,margin convention,Noun
+D3,nest,Noun
+D3,node,Noun
+D3,pie chart,Noun
+D3,select,Verb
+D3,stacked area chart,Noun
+D3,treemap,Noun
+D3,update selection,Noun

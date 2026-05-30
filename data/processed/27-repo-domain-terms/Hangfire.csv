@@ -1,0 +1,85 @@
+Domain,Term,Type
+Hangfire,ASP.NET,Noun
+Hangfire,AddOrUpdate,Verb
+Hangfire,AutomaticRetryAttribute,Noun
+Hangfire,BackgroundJob,Noun
+Hangfire,BackgroundJobClient,Noun
+Hangfire,BackgroundJobServer,Noun
+Hangfire,BackgroundJobServerOptions,Noun
+Hangfire,BackgroundJobServerStarted,Noun
+Hangfire,BackgroundJobServerStopping,Noun
+Hangfire,BackgroundJobServerStopped,Noun
+Hangfire,Batches,Noun
+Hangfire,CancellationToken,Noun
+Hangfire,Concurrency,Noun
+Hangfire,Cron,Noun
+Hangfire,Degree of Parallelism,Noun
+Hangfire,Delayed job,Noun
+Hangfire,DisableConcurrentExecution,Noun
+Hangfire,Enqueue,Verb
+Hangfire,ExpirationTimeout,Noun
+Hangfire,Failed jobs,Noun
+Hangfire,Fire-and-forget,Noun
+Hangfire,GlobalConfiguration,Noun
+Hangfire,Hangfire,Noun
+Hangfire,Hangfire.Pro,Noun
+Hangfire,HangfireServer,Noun
+Hangfire,IBackgroundJobClient,Noun
+Hangfire,IBackgroundJobServer,Noun
+Hangfire,IJobFilter,Noun
+Hangfire,Job,Noun
+Hangfire,JobFilter,Noun
+Hangfire,JobId,Noun
+Hangfire,JobQueue,Noun
+Hangfire,JobStorage,Noun
+Hangfire,MSMQ,Noun
+Hangfire,MemoryStorage,Noun
+Hangfire,Method invocation,Noun
+Hangfire,OneTimeJob,Noun
+Hangfire,PerformContext,Noun
+Hangfire,Progress tracking,Noun
+Hangfire,Queue,Noun
+Hangfire,QueueAttribute,Noun
+Hangfire,Recurring job,Noun
+Hangfire,RecurringJob,Noun
+Hangfire,RecurringJob.AddOrUpdate,Verb
+Hangfire,RecurringJob.RemoveIfExists,Verb
+Hangfire,RedisStorage,Noun
+Hangfire,Reliable,Noun
+Hangfire,SQL Server,Noun
+Hangfire,Schedule,Verb
+Hangfire,Server,Noun
+Hangfire,SetContinueWith,Verb
+Hangfire,Storage,Noun
+Hangfire,ThreadPool,Noun
+Hangfire,Time zone,Noun
+Hangfire,Unit test,Noun
+Hangfire,Windows Service,Noun
+Hangfire,Worker,Noun
+Hangfire,background process,Noun
+Hangfire,background thread,Noun
+Hangfire,background job,Noun
+Hangfire,batches,Noun
+Hangfire,cancelled,Noun
+Hangfire,cron expression,Noun
+Hangfire,dashboard,Noun
+Hangfire,delayed job,Noun
+Hangfire,distributed lock,Noun
+Hangfire,enqueued,Noun
+Hangfire,exception handling,Noun
+Hangfire,fault-tolerance,Noun
+Hangfire,fetched jobs,Noun
+Hangfire,job filter,Noun
+Hangfire,job queue,Noun
+Hangfire,job scheduling,Noun
+Hangfire,jobs list,Noun
+Hangfire,multiple server instances,Noun
+Hangfire,processing,Noun
+Hangfire,progress reporting,Noun
+Hangfire,queue poll interval,Noun
+Hangfire,recurring job,Noun
+Hangfire,retries,Noun
+Hangfire,scalability,Noun
+Hangfire,schedule a job,Verb
+Hangfire,server uptime,Noun
+Hangfire,time zone,Noun

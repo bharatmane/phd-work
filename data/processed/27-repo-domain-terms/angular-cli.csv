@@ -1,0 +1,207 @@
+Domain,Term,Type
+angular-cli,@Component,Noun
+angular-cli,@Directive,Noun
+angular-cli,@Injectable,Noun
+angular-cli,@Module,Noun
+angular-cli,@NgModule,Noun
+angular-cli,@Output,Noun
+angular-cli,@Pipe,Noun
+angular-cli,@ViewChild,Noun
+angular-cli,AOT,Noun
+angular-cli,Angular CLI,Noun
+angular-cli,AngularJS,Noun
+angular-cli,CLI,Noun
+angular-cli,ng add,Verb
+angular-cli,ng build,Verb
+angular-cli,ng generate,Verb
+angular-cli,ng new,Verb
+angular-cli,ng serve,Verb
+angular-cli,ngFor,Noun
+angular-cli,ngIf,Noun
+angular-cli,ngOnInit,Noun
+angular-cli,ngOnDestroy,Noun
+angular-cli,ngSubmit,Noun
+angular-cli,ng test,Verb
+angular-cli,ng lint,Verb
+angular-cli,ng update,Verb
+angular-cli,ng deploy,Verb
+angular-cli,angular.json,Noun
+angular-cli,angular-cli.json,Noun
+angular-cli,webpack,Noun
+angular-cli,karma,Noun
+angular-cli,protractor,Noun
+angular-cli,Typescript,Noun
+angular-cli,lazy loading,Noun
+angular-cli,build optimizer,Noun
+angular-cli,webpack-dev-server,Noun
+angular-cli,cli command,Noun
+angular-cli,angular-cli tool,Noun
+angular-cli,ng config,Verb
+angular-cli,ng docs,Verb
+angular-cli,ng e2e,Verb
+angular-cli,ng doc,Noun
+angular-cli,ng help,Verb
+angular-cli,ng version,Verb
+angular-cli,ng info,Verb
+angular-cli,ng update --all,Verb
+angular-cli,ng build --prod,Verb
+angular-cli,ng serve --open,Verb
+angular-cli,ng test --watch,Verb
+angular-cli,ng generate module,Verb
+angular-cli,ng generate component,Verb
+angular-cli,ng generate directive,Verb
+angular-cli,ng generate pipe,Verb
+angular-cli,ng generate service,Verb
+angular-cli,ng generate class,Verb
+angular-cli,ng generate guard,Verb
+angular-cli,ng generate interceptor,Verb
+angular-cli,ng generate enum,Verb
+angular-cli,ng generate interface,Verb
+angular-cli,ng generate application,Verb
+angular-cli,ng generate workspace,Verb
+angular-cli,ng build --aot,Verb
+angular-cli,ng build --source-map,Verb
+angular-cli,ng build --optimization,Verb
+angular-cli,ng build --stats-json,Verb
+angular-cli,ng build --base-href,Verb
+angular-cli,ng build --output-hashing,Verb
+angular-cli,ng build --progress,Verb
+angular-cli,ng build --deploy-url,Verb
+angular-cli,ng build --extract-css,Verb
+angular-cli,ng build --no-progress,Verb
+angular-cli,ng serve --host,Verb
+angular-cli,ng serve --port,Verb
+angular-cli,ng serve --proxy-config,Verb
+angular-cli,ng serve --disable-host-check,Verb
+angular-cli,ng serve --watch,Verb
+angular-cli,ng serve --ssl,Verb
+angular-cli,ng serve --hmr,Verb
+angular-cli,ng serve --public-host,Verb
+angular-cli,ng serve --open-url,Verb
+angular-cli,ng serve --environment,Verb
+angular-cli,ng lint --fix,Verb
+angular-cli,ng lint --format,Verb
+angular-cli,ng lint --type-check,Verb
+angular-cli,ng lint --project,Verb
+angular-cli,ng lint --rules-dir,Verb
+angular-cli,ng test --code-coverage,Verb
+angular-cli,ng test --single-run,Verb
+angular-cli,ng test --browsers,Verb
+angular-cli,ng test --no-watch,Verb
+angular-cli,ng test --reporters,Verb
+angular-cli,ng e2e --protractor-config,Verb
+angular-cli,ng e2e --base-url,Verb
+angular-cli,ng e2e --dev-server-target,Verb
+angular-cli,ng e2e --direct-connect,Verb
+angular-cli,ng e2e --restart,Verb
+angular-cli,ng e2e --plugins,Verb
+angular-cli,ng generate application --routing,Verb
+angular-cli,ng generate application --style,Verb
+angular-cli,ng generate application --skip-install,Verb
+angular-cli,ng generate module --flat,Verb
+angular-cli,ng generate module --route,Verb
+angular-cli,ng generate module --routing,Verb
+angular-cli,ng generate component --inline-style,Verb
+angular-cli,ng generate component --inline-template,Verb
+angular-cli,ng generate component --skip-import,Verb
+angular-cli,ng generate component --module,Verb
+angular-cli,ng generate component --change-detection,Verb
+angular-cli,ng generate component --view-encapsulation,Verb
+angular-cli,ng generate component --style,Verb
+angular-cli,ng generate component --skip-tests,Verb
+angular-cli,ng generate directive --skip-tests,Verb
+angular-cli,ng generate pipe --skip-tests,Verb
+angular-cli,ng generate service --skip-tests,Verb
+angular-cli,ng generate guard --skip-tests,Verb
+angular-cli,ng generate interceptor --skip-tests,Verb
+angular-cli,ng generate enum --skip-tests,Verb
+angular-cli,ng generate interface --skip-tests,Verb
+angular-cli,ng generate class --skip-tests,Verb
+angular-cli,ng generate application --skip-install,Verb
+angular-cli,ng generate workspace --skip-install,Verb
+angular-cli,ng update @angular/core,Verb
+angular-cli,ng update @angular/cli,Verb
+angular-cli,ng update --force,Verb
+angular-cli,ng update --all,Verb
+angular-cli,ng update --next,Verb
+angular-cli,ng update --prerelease,Verb
+angular-cli,ng update --migrate-only,Verb
+angular-cli,ng update --dry-run,Verb
+angular-cli,ng update --from,Verb
+angular-cli,ng update --to,Verb
+angular-cli,ng add @angular/material,Verb
+angular-cli,ng add @angular/fire,Verb
+angular-cli,ng add @ng-bootstrap,Verb
+angular-cli,ng add @angular/elements,Verb
+angular-cli,ng add @angular/pwa,Verb
+angular-cli,ng add @angular/cdk,Verb
+angular-cli,ng add @angular/flex-layout,Verb
+angular-cli,ng add ngx-bootstrap,Verb
+angular-cli,ng add ngx-charts,Verb
+angular-cli,ng add @ngrx/store,Verb
+angular-cli,ng add @ngrx/effects,Verb
+angular-cli,ng add @angular/cli --interactive,Verb
+angular-cli,ng add --save-dev,Verb
+angular-cli,ng add --module,Verb
+angular-cli,ng add --skip-install,Verb
+angular-cli,ng deploy --target,Verb
+angular-cli,ng deploy --port,Verb
+angular-cli,ng deploy --output,Verb
+angular-cli,ng deploy --app,Verb
+angular-cli,ng deploy --configuration,Verb
+angular-cli,ng deploy --provider,Verb
+angular-cli,ng deploy --deploy-url,Verb
+angular-cli,ng deploy --disable-host-check,Verb
+angular-cli,ng deploy --skip-build,Verb
+angular-cli,ng build --verbose,Verb
+angular-cli,ng serve --verbose,Verb
+angular-cli,ng serve --ssl-cert,Verb
+angular-cli,ng serve --ssl-key,Verb
+angular-cli,ng test --watch,Verb
+angular-cli,ng build --watch,Verb
+angular-cli,ng build --server,Verb
+angular-cli,ng build --service-worker,Verb
+angular-cli,ng build --prod --aot,Verb
+angular-cli,ng build --prod --stats-json,Verb
+angular-cli,ng build --prod --source-map,Verb
+angular-cli,ng build --prod --optimization,Verb
+angular-cli,ng build --prod --extract-css,Verb
+angular-cli,ng build --prod --no-progress,Verb
+angular-cli,ng build --prod --base-href,Verb
+angular-cli,ng build --prod --output-hashing,Verb
+angular-cli,ng build --prod --progress,Verb
+angular-cli,ng serve --open-url,Verb
+angular-cli,ng serve --host 0.0.0.0,Verb
+angular-cli,ng serve --host localhost,Verb
+angular-cli,ng serve --port 4200,Verb
+angular-cli,ng serve --disable-host-check,Verb
+angular-cli,ng serve --environment prod,Verb
+angular-cli,ng serve --configuration production,Verb
+angular-cli,ng serve --configuration development,Verb
+angular-cli,ng serve --proxy-config,Verb
+angular-cli,ng serve --watch,Verb
+angular-cli,ng serve --watch-all,Verb
+angular-cli,ng serve --hmr,Verb
+angular-cli,ng serve --disable-host-check,Verb
+angular-cli,ng serve --public-host,Verb
+angular-cli,ng serve --open,Verb
+angular-cli,ng serve --ssl,Verb
+angular-cli,ng serve --host 0.0.0.0,Verb
+angular-cli,ng serve --disable-host-check,Verb
+angular-cli,ng serve --proxy-config,Verb
+angular-cli,ng serve --open,Verb
+angular-cli,ng serve --host localhost,Verb
+angular-cli,ng serve --ssl-cert,Verb
+angular-cli,ng serve --ssl-key,Verb
+angular-cli,ng serve --disable-host-check,Verb
+angular-cli,ng serve --open-url,Verb
+angular-cli,ng serve --disable-host-check,Verb
+angular-cli,ng serve --ssl,Verb
+angular-cli,ng serve --hmr,Verb
+angular-cli,ng serve --host localhost,Verb
+angular-cli,ng serve --disable-host-check,Verb
+angular-cli,ng build --no-progress,Verb
+angular-cli,ng build --source-map,Verb
+angular-cli,ng build --progress,Verb
+angular-cli,ng build --verbose,Verb
+angular-cli,ng build --deploy-url,Verb

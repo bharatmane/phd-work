@@ -1,0 +1,120 @@
+Domain,Term,Type
+spring-framework,@AfterReturning,Noun
+spring-framework,@Aspect,Noun
+spring-framework,@Autowired,Noun
+spring-framework,@Bean,Noun
+spring-framework,@Component,Noun
+spring-framework,@Configuration,Noun
+spring-framework,@Controller,Noun
+spring-framework,@EnableAutoConfiguration,Noun
+spring-framework,@Injectable,Noun
+spring-framework,@Repository,Noun
+spring-framework,@RestController,Noun
+spring-framework,@Service,Noun
+spring-framework,AbstractApplicationContext,Noun
+spring-framework,AbstractBeanFactory,Noun
+spring-framework,AbstractPlatformTransactionManager,Noun
+spring-framework,AbstractPointcutAdvisor,Noun
+spring-framework,ApplicationContext,Noun
+spring-framework,ApplicationContext.xml,Noun
+spring-framework,ApplicationEvent,Noun
+spring-framework,ApplicationListener,Noun
+spring-framework,ApplicationProperties,Noun
+spring-framework,AspectJ,Noun
+spring-framework,AutowireCapableBeanFactory,Noun
+spring-framework,BCryptPasswordEncoder,Noun
+spring-framework,Bean,Noun
+spring-framework,BeanDefinition,Noun
+spring-framework,BeanFactory,Noun
+spring-framework,BeanFactoryPostProcessor,Noun
+spring-framework,BeanPostProcessor,Noun
+spring-framework,BeansException,Noun
+spring-framework,Cacheable,Noun
+spring-framework,ClassPathXmlApplicationContext,Noun
+spring-framework,CommandLineRunner,Noun
+spring-framework,ComponentScan,Noun
+spring-framework,ConfigurableApplicationContext,Noun
+spring-framework,Controller,Noun
+spring-framework,CrudRepository,Noun
+spring-framework,DispatcherServlet,Noun
+spring-framework,EnableScheduling,Noun
+spring-framework,EntityManagerFactory,Noun
+spring-framework,ExceptionHandler,Noun
+spring-framework,FieldInjection,Noun
+spring-framework,FilterChainProxy,Noun
+spring-framework,GrantedAuthority,Noun
+spring-framework,H2Console,Noun
+spring-framework,HibernateTransactionManager,Noun
+spring-framework,Hook,Noun
+spring-framework,JdbcTemplate,Noun
+spring-framework,JmxAttributeSource,Noun
+spring-framework,JoinPoint,Noun
+spring-framework,LazyInitializationException,Noun
+spring-framework,LocalContainerEntityManagerFactoryBean,Noun
+spring-framework,ModelAndView,Noun
+spring-framework,NoSuchBeanDefinitionException,Noun
+spring-framework,OpenEntityManagerInViewInterceptor,Noun
+spring-framework,POJO,Noun
+spring-framework,Pointcut,Noun
+spring-framework,Propagation,Noun
+spring-framework,RequestMapping,Noun
+spring-framework,RestTemplate,Noun
+spring-framework,Ribbon,Noun
+spring-framework,SecurityContext,Noun
+spring-framework,Service,Noun
+spring-framework,SessionFactory,Noun
+spring-framework,SimpleUrlHandlerMapping,Noun
+spring-framework,Spring Boot,Noun
+spring-framework,Spring Cloud,Noun
+spring-framework,Spring Framework,Noun
+spring-framework,Spring MVC,Noun
+spring-framework,Spring Security,Noun
+spring-framework,SpringApplication,Noun
+spring-framework,SpringBootApplication,Noun
+spring-framework,SqlSessionFactory,Noun
+spring-framework,TaskScheduler,Noun
+spring-framework,ThreadPoolTaskExecutor,Noun
+spring-framework,TransactionDefinition,Noun
+spring-framework,TransactionManager,Noun
+spring-framework,UserDetails,Noun
+spring-framework,ViewResolver,Noun
+spring-framework,WebApplicationContext,Noun
+spring-framework,WebSecurityConfigurerAdapter,Noun
+spring-framework,WebSecurityConfigurerAdapter (old),Noun
+spring-framework,XMLBeanDefinitionReader,Noun
+spring-framework,abstract,Noun
+spring-framework,annotation-based,Noun
+spring-framework,application.properties,Noun
+spring-framework,aspect,Noun
+spring-framework,auto-configuration,Noun
+spring-framework,bean lifecycle,Noun
+spring-framework,bean scope,Noun
+spring-framework,beans,Noun
+spring-framework,boot,Noun
+spring-framework,context,Noun
+spring-framework,cross cutting concern,Noun
+spring-framework,dependency injection,Noun
+spring-framework,embedded Tomcat,Noun
+spring-framework,event handling,Noun
+spring-framework,factory bean,Noun
+spring-framework,framework,Noun
+spring-framework,injection,Noun
+spring-framework,ioc,Noun
+spring-framework,java config,Noun
+spring-framework,jdbc,Noun
+spring-framework,jpa,Noun
+spring-framework,lazy loading,Noun
+spring-framework,model,Noun
+spring-framework,module,Noun
+spring-framework,mvc,Noun
+spring-framework,profile,Noun
+spring-framework,qualifier,Noun
+spring-framework,repository,Noun
+spring-framework,rest,Noun
+spring-framework,scanning,Noun
+spring-framework,spring-framework,Noun
+spring-framework,starter,Noun
+spring-framework,template engine,Noun
+spring-framework,transaction management,Noun
+spring-framework,transactional,Noun
+spring-framework,xml configuration,Noun

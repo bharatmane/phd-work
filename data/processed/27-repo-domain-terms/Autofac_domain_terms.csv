@@ -1,0 +1,113 @@
+Domain,Term,Type
+Autofac,AOP,Noun
+Autofac,ActivatedEventArgs,Noun
+Autofac,ActivatingEventArgs,Noun
+Autofac,Activator,Noun
+Autofac,AssemblyScanner,Noun
+Autofac,AutoFac,Noun
+Autofac,Autofac, Noun
+Autofac,AutofacContainer,Noun
+Autofac,AutofacModule,Noun
+Autofac,AutofacMultitenant,Noun
+Autofac,Autowiring,Noun
+Autofac,BeginLifetimeScope,Verb
+Autofac,ChildLifetimeScope,Noun
+Autofac,CircularDependencyException,Noun
+Autofac,Component,Noun
+Autofac,ComponentContext,Noun
+Autofac,ComponentRegisteredEventArgs,Noun
+Autofac,ComponentRegistration,Noun
+Autofac,ComponentRegistry,Noun
+Autofac,ConstructorFinder,Noun
+Autofac,Container,Noun
+Autofac,ContainerBuildOptions,Noun
+Autofac,ContainerBuilder,Noun
+Autofac,CurrentScopeLifetime,Noun
+Autofac,DefaultLifetimeScope,Noun
+Autofac,DefaultPropertySelector,Noun
+Autofac,DelegateActivator,Noun
+Autofac,DelegatePropertySelector,Noun
+Autofac,Dependency,Noun
+Autofac,DependencyResolutionException,Noun
+Autofac,Disposer,Noun
+Autofac,Disposable,Noun
+Autofac,Dispose,Verb
+Autofac,Factory adapter,Noun
+Autofac,IActivatedEventArgs,Noun
+Autofac,IActivatingEventArgs,Noun
+Autofac,IComponentContext,Noun
+Autofac,IComponentLifetime,Noun
+Autofac,IComponentRegistration,Noun
+Autofac,IComponentRegistry,Noun
+Autofac,IComponentRegistryServices,Noun
+Autofac,IContainer,Noun
+Autofac,IDisposer,Noun
+Autofac,IIndex,Noun
+Autofac,IInstanceActivator,Noun
+Autofac,ILifetimeScope,Noun
+Autofac,IModule,Noun
+Autofac,IRegistrationBuilder,Noun
+Autofac,IRegistrationSource,Noun
+Autofac,IResolver,Noun
+Autofac,IServiceProvider,Noun
+Autofac,IServiceCollection,Noun
+Autofac,IStartable,Noun
+Autofac,ImplicitRegistrationSource,Noun
+Autofac,InstancePerDependency,Noun
+Autofac,InstancePerLifetimeScope,Noun
+Autofac,InstanceSharing,Noun
+Autofac,KeyedService,Noun
+Autofac,Lifetime,Noun
+Autofac,LifetimeScope,Noun
+Autofac,MatchingScopeLifetime,Noun
+Autofac,Module,Noun
+Autofac,MultitenantContainer,Noun
+Autofac,NamedParameter,Noun
+Autofac,Owned<T>,Noun
+Autofac,Parameter,Noun
+Autofac,PerRequest,Noun
+Autofac,PropertyInjection,Noun
+Autofac,PropertySelector,Noun
+Autofac,RegisterAssemblyTypes,Verb
+Autofac,RegisterGeneric,Verb
+Autofac,RegisterInstance,Verb
+Autofac,RegisterModule,Verb
+Autofac,RegisterType,Verb
+Autofac,Registration,Noun
+Autofac,RegistrationBuilder,Noun
+Autofac,RegistrationException,Noun
+Autofac,RegistrationSourceAddedEventArgs,Noun
+Autofac,Resolve,Verb
+Autofac,ResolveNamed,Verb
+Autofac,ResolveOptional,Verb
+Autofac,Scope,Noun
+Autofac,Service,Noun
+Autofac,ServiceLocator,Noun
+Autofac,ServiceRegistration,Noun
+Autofac,SingleInstance,Noun
+Autofac,Startable,Noun
+Autofac,Transient,Noun
+Autofac,UniqueService,Noun
+Autofac,Update,Verb
+Autofac,WithParameter,Verb
+Autofac,BeginLifetimeScope,Verb
+Autofac,property injection,Noun
+Autofac,dependency injection,Noun
+Autofac,inversion of control,Noun
+Autofac,IoC,Noun
+Autofac,DI,Noun
+Autofac,module registration,Noun
+Autofac,nested container,Noun
+Autofac,child scope,Noun
+Autofac,multitenancy,Noun
+Autofac,constructor injection,Noun
+Autofac,scope,Noun
+Autofac,lifetime,Noun
+Autofac,container,Noun
+Autofac,registry,Noun
+Autofac,interception,Noun
+Autofac,factory,Noun
+Autofac,Ninject,Noun
+Autofac,UnityContainer,Noun
+Autofac,Castle Windsor,Noun
+Autofac,SimpleInjector,Noun

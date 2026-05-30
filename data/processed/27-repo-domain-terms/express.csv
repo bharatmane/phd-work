@@ -1,0 +1,56 @@
+Domain,Term,Type
+Express,CORS,Noun
+Express,Express,Noun
+Express,Express.js,Noun
+Express,Handlebars,Noun
+Express,Helmet,Noun
+Express,HTTP methods,Noun
+Express,JSON payload,Noun
+Express,Middleware,Noun
+Express,Morgan,Noun
+Express,NextFunction,Noun
+Express,Node.js,Noun
+Express,Router,Noun
+Express,Server-Sent Events,Noun
+Express,Stack trace,Noun
+Express,Static,Noun
+Express,WebSocket,Noun
+Express,X-Powered-By,Noun
+Express,app,Noun
+Express,app.delete,Verb
+Express,app.get,Verb
+Express,app.listen,Verb
+Express,app.post,Verb
+Express,app.put,Verb
+Express,app.use,Verb
+Express,body-parser,Noun
+Express,cookie-parser,Noun
+Express,err (error argument),Noun
+Express,error-handling middleware,Noun
+Express,express application,Noun
+Express,express.static,Verb
+Express,freemarker,Noun
+Express,locals,Noun
+Express,next,Verb
+Express,req,Noun
+Express,req.body,Noun
+Express,req.cookies,Noun
+Express,req.ip,Noun
+Express,req.params,Noun
+Express,req.query,Noun
+Express,req.user,Noun
+Express,res,Noun
+Express,res.json,Verb
+Express,res.redirect,Verb
+Express,res.render,Verb
+Express,res.send,Verb
+Express,res.sendFile,Verb
+Express,res.set,Verb
+Express,res.status,Verb
+Express,route parameters,Noun
+Express,router.use,Verb
+Express,routes,Noun
+Express,session store,Noun
+Express,static files,Noun
+Express,template engine,Noun
+Express,urlencoded,Noun

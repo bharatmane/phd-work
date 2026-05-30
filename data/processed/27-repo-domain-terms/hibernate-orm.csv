@@ -1,0 +1,37 @@
+Hibernate-ORM,@Entity,Noun
+Hibernate-ORM,@Table,Noun
+Hibernate-ORM,@Id,Noun
+Hibernate-ORM,@GeneratedValue,Noun
+Hibernate-ORM,@Column,Noun
+Hibernate-ORM,@OneToMany,Noun
+Hibernate-ORM,@ManyToOne,Noun
+Hibernate-ORM,@ManyToMany,Noun
+Hibernate-ORM,@JoinColumn,Noun
+Hibernate-ORM,@Transactional,Noun
+Hibernate-ORM,Session,Noun
+Hibernate-ORM,SessionFactory,Noun
+Hibernate-ORM,EntityManager,Noun
+Hibernate-ORM,PersistenceContext,Noun
+Hibernate-ORM,LazyLoading,Noun
+Hibernate-ORM,EagerLoading,Noun
+Hibernate-ORM,HQL,Noun
+Hibernate-ORM,Criteria API,Noun
+Hibernate-ORM,SecondLevelCache,Noun
+Hibernate-ORM,QueryCache,Noun
+Hibernate-ORM,Dialect,Noun
+Hibernate-ORM,Flush,Noun
+Hibernate-ORM,Detached,Noun
+Hibernate-ORM,Persistent,Noun
+Hibernate-ORM,Transient,Noun
+Hibernate-ORM,CascadeType,Noun
+Hibernate-ORM,FetchType,Noun
+Hibernate-ORM,OptimisticLock,Noun
+Hibernate-ORM,PessimisticLock,Noun
+Hibernate-ORM,N+1 Problem,Noun
+Hibernate-ORM,Proxy,Noun
+Hibernate-ORM,getCurrentSession,Verb
+Hibernate-ORM,openSession,Verb
+Hibernate-ORM,merge,Verb
+Hibernate-ORM,persist,Verb
+Hibernate-ORM,refresh,Verb
+Hibernate-ORM,evict,Verb

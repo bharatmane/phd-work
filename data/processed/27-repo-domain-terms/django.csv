@@ -1,0 +1,97 @@
+Domain,Term,Type
+Django,ALLOWED_HOSTS,Noun
+Django,ASGI,Noun
+Django,AbstractUser,Noun
+Django,AdminSite,Noun
+Django,AnonymousUser,Noun
+Django,AutoField,Noun
+Django,BigIntegerField,Noun
+Django,BooleanField,Noun
+Django,CharField,Noun
+Django,Context processor,Noun
+Django,Cookiecutter,Noun
+Django,CSRF,Noun
+Django,CSRFProtect,Noun
+Django,Celery,Noun
+Django,Class-Based View,Noun
+Django,ContentType,Noun
+Django,Cross-Site Request Forgery,Noun
+Django,DATABASES,Noun
+Django,DEBUG,Noun
+Django,Django,Noun
+Django,EMAIL_HOST,Noun
+Django,EmailField,Noun
+Django,FileField,Noun
+Django,ForeignKey,Noun
+Django,FormView,Noun
+Django,GenericForeignKey,Noun
+Django,GenericRelation,Noun
+Django,ImageField,Noun
+Django,INSTALLED_APPS,Noun
+Django,IntegerField,Noun
+Django,JsonResponse,Noun
+Django,ManyToManyField,Noun
+Django,MiddlewareMixin,Noun
+Django,Model,Noun
+Django,ModelAdmin,Noun
+Django,ModelForm,Noun
+Django,MultipleObjectsReturned,Noun
+Django,NullBooleanField,Noun
+Django,OneToOneField,Noun
+Django,PasswordResetView,Noun
+Django,PermissionDenied,Noun
+Django,QuerySet,Noun
+Django,REST framework,Noun
+Django,RequestFactory,Noun
+Django,SessionAuthentication,Noun
+Django,SlugField,Noun
+Django,TemplateDoesNotExist,Noun
+Django,TemplateView,Noun
+Django,TimeField,Noun
+Django,URLconf,Noun
+Django,UUIDField,Noun
+Django,ValidationError,Noun
+Django,View,Noun
+Django,WSGI,Noun
+Django,admin.py,Noun
+Django,admin site,Noun
+Django,asgi.py,Noun
+Django,authentication,Noun
+Django,auto_now,Verb
+Django,auto_now_add,Verb
+Django,collectstatic,Verb
+Django,context processor,Noun
+Django,contrib,Noun
+Django,create superuser,Verb
+Django,csrf_token,Noun
+Django,decorator,Noun
+Django,development server,Noun
+Django,dispatcher,Noun
+Django,fields,Noun
+Django,forms,Noun
+Django,get_absolute_url,Verb
+Django,get_context_data,Verb
+Django,get_object_or_404,Verb
+Django,generic view,Noun
+Django,makemigrations,Verb
+Django,middleware,Noun
+Django,migrate,Verb
+Django,model forms,Noun
+Django,model inheritance,Noun
+Django,model validation,Noun
+Django,multiple objects returned,Noun
+Django,orm,Noun
+Django,pre_save,Noun
+Django,python manage.py,Noun
+Django,render,Verb
+Django,request,Noun
+Django,runserver,Verb
+Django,signals,Noun
+Django,static files,Noun
+Django,template,Noun
+Django,template filters,Noun
+Django,template tags,Noun
+Django,template variables,Noun
+Django,urls.py,Noun
+Django,views.py,Noun
+Django,whitenoise,Noun

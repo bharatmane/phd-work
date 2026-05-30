@@ -1,0 +1,100 @@
+Domain,Term,Type
+Logging,$ERROR,Noun
+Logging,$INFO,Noun
+Logging,$message,Noun
+Logging,$${level},Noun
+Logging,${exception},Noun
+Logging,${logger},Noun
+Logging,${message},Noun
+Logging,AsyncAppender,Noun
+Logging,AsyncLogger,Noun
+Logging,AsyncLogging,Noun
+Logging,Apache Log4j,Noun
+Logging,Apache Logging,Noun
+Logging,Appender,Noun
+Logging,AsyncAppender,Noun
+Logging,AsyncHandler,Noun
+Logging,AsyncTarget,Noun
+Logging,AsyncWrite,Noun
+Logging,Buffering,Noun
+Logging,Category,Noun
+Logging,CircularBuffer,Noun
+Logging,ConsoleAppender,Noun
+Logging,DailyRollingFileAppender,Noun
+Logging,DatabaseTarget,Noun
+Logging,Debug level,Noun
+Logging,Error level,Noun
+Logging,FATAL level,Noun
+Logging,FileAppender,Noun
+Logging,FileTarget,Noun
+Logging,FileWriter,Noun
+Logging,Filter,Noun
+Logging,FilterChain,Noun
+Logging,Formatter,Noun
+Logging,HANDLER,Noun
+Logging,INFO level,Noun
+Logging,ILogger,Noun
+Logging,ILoggingEvent,Noun
+Logging,Level,Noun
+Logging,Log,Noun
+Logging,Log Manager,Noun
+Logging,Log4J,Noun
+Logging,Log4J2,Noun
+Logging,LogManager,Noun
+Logging,Logback,Noun
+Logging,Logger,Noun
+Logging,LoggerFactory,Noun
+Logging,Logging,Noun
+Logging,LoggingEvent,Noun
+Logging,LoggingSystem,Noun
+Logging,Logs,Noun
+Logging,MDC,Noun
+Logging,NDC,Noun
+Logging,NOPLogger,Noun
+Logging,NLog,Noun
+Logging,NLog.config,Noun
+Logging,ObjectRenderer,Noun
+Logging,PatternLayout,Noun
+Logging,PatternLayoutEncoder,Noun
+Logging,PatternString,Noun
+Logging,Priority,Noun
+Logging,RollingFileAppender,Noun
+Logging,SYSLOG,Noun
+Logging,SLF4J,Noun
+Logging,SMTPAppender,Noun
+Logging,SQLAppender,Noun
+Logging,SyslogAppender,Noun
+Logging,System.out,Noun
+Logging,Target,Noun
+Logging,Threshold,Noun
+Logging,Trace level,Noun
+Logging,WARN level,Noun
+Logging,WriterAppender,Noun
+Logging,XmlLayout,Noun
+Logging,appender,Noun
+Logging,appender-ref,Noun
+Logging,appenders,Noun
+Logging,audit log,Noun
+Logging,category,Noun
+Logging,console logging,Noun
+Logging,daily rolling,Noun
+Logging,debug,Verb
+Logging,error,Verb
+Logging,fatal,Verb
+Logging,file logging,Noun
+Logging,filtering,Noun
+Logging,info,Verb
+Logging,level,Noun
+Logging,log,Verb
+Logging,log file,Noun
+Logging,log4net,Noun
+Logging,logger name,Noun
+Logging,logging framework,Noun
+Logging,logging library,Noun
+Logging,logging system,Noun
+Logging,logs,Noun
+Logging,rolling policy,Noun
+Logging,serilog,Noun
+Logging,stack trace,Noun
+Logging,threshold,Noun
+Logging,warn,Verb

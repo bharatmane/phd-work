@@ -1,0 +1,73 @@
+Domain,Term,Type
+NestJS,@Body,Noun
+NestJS,@Controller,Noun
+NestJS,@Get,Noun
+NestJS,@Injectable,Noun
+NestJS,@Module,Noun
+NestJS,@Param,Noun
+NestJS,@Query,Noun
+NestJS,@Repository,Noun
+NestJS,@UseGuards,Noun
+NestJS,AppModule,Noun
+NestJS,APP_FILTER,Noun
+NestJS,APP_GUARD,Noun
+NestJS,APP_INTERCEPTOR,Noun
+NestJS,APP_PIPE,Noun
+NestJS,Angular-like,Noun
+NestJS,ApplicationContext,Noun
+NestJS,AuthGuard,Noun
+NestJS,BaseExceptionFilter,Noun
+NestJS,CallHandler,Noun
+NestJS,Catch,Verb
+NestJS,Controller,Noun
+NestJS,CqrsModule,Noun
+NestJS,CsrfProtection,Noun
+NestJS,DTO,Noun
+NestJS,Dependency Injection,Noun
+NestJS,ExecutionContext,Noun
+NestJS,FastifyAdapter,Noun
+NestJS,Filter,Noun
+NestJS,FORBIDDEN,Noun
+NestJS,FactoryProvider,Noun
+NestJS,GraphQLModule,Noun
+NestJS,Guard,Noun
+NestJS,HTTPException,Noun
+NestJS,I18nModule,Noun
+NestJS,INestApplication,Noun
+NestJS,Intercept,Verb
+NestJS,Interceptor,Noun
+NestJS,Logger,Noun
+NestJS,Middleware,Noun
+NestJS,Module,Noun
+NestJS,Nest,Noun
+NestJS,NestApplication,Noun
+NestJS,NestFactory,Noun
+NestJS,NestJS,Noun
+NestJS,PassportModule,Noun
+NestJS,PIPE,Noun
+NestJS,ParamDecorator,Noun
+NestJS,Pipe,Noun
+NestJS,Reflector,Noun
+NestJS,Resolver,Noun
+NestJS,RolesGuard,Noun
+NestJS,RxJS,Noun
+NestJS,Scope,Noun
+NestJS,TYPEORM,Noun
+NestJS,Transport,Noun
+NestJS,ValidationPipe,Noun
+NestJS,WebSocketGateway,Noun
+NestJS,compose decorators,Verb
+NestJS,custom decorator,Noun
+NestJS,exception filter,Noun
+NestJS,feature module,Noun
+NestJS,intercept,Verb
+NestJS,lazy loading,Noun
+NestJS,metadata,Noun
+NestJS,middleware consumer,Noun
+NestJS,moduleRef,Noun
+NestJS,nest generate,Verb
+NestJS,provider,Noun
+NestJS,request-scoped,Noun
+NestJS,service,Noun
+NestJS,testing module,Noun
+NestJS,validation,Noun

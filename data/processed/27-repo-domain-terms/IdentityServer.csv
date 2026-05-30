@@ -1,0 +1,94 @@
+Domain,Term,Type
+IdentityServer,/.well-known/openid-configuration,Noun
+IdentityServer,Access token,Noun
+IdentityServer,AccessTokenLifetime,Noun
+IdentityServer,AddDeveloperSigningCredential,Verb
+IdentityServer,AddInMemoryApiResources,Verb
+IdentityServer,AddInMemoryApiScopes,Verb
+IdentityServer,AddInMemoryClients,Verb
+IdentityServer,AddInMemoryIdentityResources,Verb
+IdentityServer,AddJwtBearer,Verb
+IdentityServer,Api Resource,Noun
+IdentityServer,Api Scope,Noun
+IdentityServer,ApiResource,Noun
+IdentityServer,ApiScope,Noun
+IdentityServer,ApiScopeClaim,Noun
+IdentityServer,ApiScopeName,Noun
+IdentityServer,Authorization Code,Noun
+IdentityServer,Authorize endpoint,Noun
+IdentityServer,Back-channel logout,Noun
+IdentityServer,Bearer token,Noun
+IdentityServer,Claim,Noun
+IdentityServer,ClaimType,Noun
+IdentityServer,Client,Noun
+IdentityServer,Client Credentials,Noun
+IdentityServer,Client ID,Noun
+IdentityServer,Client secret,Noun
+IdentityServer,Consent,Noun
+IdentityServer,Consent screen,Noun
+IdentityServer,Device code,Noun
+IdentityServer,Device flow,Noun
+IdentityServer,Duende,Noun
+IdentityServer,EF Core,Noun
+IdentityServer,External login,Noun
+IdentityServer,Grant type,Noun
+IdentityServer,Hybrid flow,Noun
+IdentityServer,IClientStore,Noun
+IdentityServer,ID token,Noun
+IdentityServer,Identity Provider,Noun
+IdentityServer,Identity Resource,Noun
+IdentityServer,IdentityServer,Noun
+IdentityServer,IdentityServer4,Noun
+IdentityServer,Implicit flow,Noun
+IdentityServer,JWK,Noun
+IdentityServer,JWKS,Noun
+IdentityServer,JWT,Noun
+IdentityServer,JwtBearer,Noun
+IdentityServer,Logout,Noun
+IdentityServer,MFA,Noun
+IdentityServer,Multi-factor,Noun
+IdentityServer,Nonce,Noun
+IdentityServer,OAUTH,Noun
+IdentityServer,OAuth2,Noun
+IdentityServer,OIDC,Noun
+IdentityServer,OpenID Connect,Noun
+IdentityServer,PKCE,Noun
+IdentityServer,PersistedGrant,Noun
+IdentityServer,ProfileService,Noun
+IdentityServer,Redirect URI,Noun
+IdentityServer,Refresh token,Noun
+IdentityServer,ResourceOwnerPassword,Verb
+IdentityServer,Role,Verb
+IdentityServer,SAML,Noun
+IdentityServer,Scope,Noun
+IdentityServer,Secret,Noun
+IdentityServer,Signing key,Noun
+IdentityServer,SlidingRefreshTokenLifetime,Noun
+IdentityServer,Subject,Noun
+IdentityServer,Token endpoint,Noun
+IdentityServer,Token exchange,Noun
+IdentityServer,Token validation,Noun
+IdentityServer,UserInfo endpoint,Noun
+IdentityServer,access_token,Noun
+IdentityServer,authorization endpoint,Noun
+IdentityServer,authorization server,Noun
+IdentityServer,authorization_code,Noun
+IdentityServer,back-channel,Noun
+IdentityServer,client configuration,Noun
+IdentityServer,client_credentials,Noun
+IdentityServer,code_challenge,Noun
+IdentityServer,code_verifier,Noun
+IdentityServer,consent UI,Noun
+IdentityServer,front-channel logout,Noun
+IdentityServer,grant types,Noun
+IdentityServer,id_token,Noun
+IdentityServer,introspection,Noun
+IdentityServer,login page,Noun
+IdentityServer,logout URI,Noun
+IdentityServer,refresh_token,Noun
+IdentityServer,scope values,Noun
+IdentityServer,token revocation,Noun
+IdentityServer,token_type_hint,Noun
+IdentityServer,user claims,Noun
+IdentityServer,user consent,Noun
+IdentityServer,user_id,Noun
