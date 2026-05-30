@@ -12,19 +12,33 @@ export function Navbar() {
           </p>
         </div>
         <nav className="hidden flex-wrap gap-2 lg:flex">
-          {navLinks.map((link) => (
-            <NavLink
-              key={link.to}
-              to={link.to}
-              className={({ isActive }) =>
-                `rounded-full px-4 py-2 text-sm transition ${
-                  isActive ? "bg-white/14 text-white" : "text-slate-300 hover:bg-white/8 hover:text-white"
-                }`
-              }
-            >
-              {link.label}
-            </NavLink>
-          ))}
+          {navLinks.map((link) =>
+            link.label === "Live Demo" ? (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                className="rounded-full bg-cyan-400/20 border border-cyan-400/40 px-4 py-2
+                           text-sm font-semibold text-cyan-300 transition
+                           hover:bg-cyan-400/30 hover:text-cyan-200"
+              >
+                ⚡ {link.label}
+              </NavLink>
+            ) : (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                className={({ isActive }) =>
+                  `rounded-full px-4 py-2 text-sm transition ${
+                    isActive
+                      ? "bg-white/14 text-white"
+                      : "text-slate-300 hover:bg-white/8 hover:text-white"
+                  }`
+                }
+              >
+                {link.label}
+              </NavLink>
+            )
+          )}
         </nav>
       </div>
     </header>

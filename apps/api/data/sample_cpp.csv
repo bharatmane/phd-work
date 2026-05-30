@@ -1,0 +1,129 @@
+code,readability_level
+"int calculate_factorial(int number) {
+    if (number <= 1) return 1;
+    return number * calculate_factorial(number - 1);
+}",High
+"bool is_prime_number(int candidate) {
+    if (candidate < 2) return false;
+    for (int divisor = 2; divisor * divisor <= candidate; ++divisor) {
+        if (candidate % divisor == 0) return false;
+    }
+    return true;
+}",High
+"class BankAccount {
+public:
+    BankAccount(std::string owner_name, double initial_balance)
+        : owner(owner_name), balance(initial_balance) {}
+    void deposit(double amount) { balance += amount; }
+private:
+    std::string owner;
+    double balance;
+};",High
+"int find_maximum_element(const std::vector<int>& numbers) {
+    int maximum = numbers[0];
+    for (int value : numbers) {
+        if (value > maximum) maximum = value;
+    }
+    return maximum;
+}",High
+"std::string reverse_string(const std::string& input) {
+    std::string reversed(input.rbegin(), input.rend());
+    return reversed;
+}",High
+"double compute_average(const std::vector<double>& values) {
+    double total = 0.0;
+    for (double value : values) total += value;
+    return values.empty() ? 0.0 : total / values.size();
+}",High
+"int count_vowels(const std::string& text) {
+    int vowel_count = 0;
+    for (char character : text) {
+        if (character == 'a' || character == 'e' || character == 'i' || character == 'o' || character == 'u') {
+            ++vowel_count;
+        }
+    }
+    return vowel_count;
+}",High
+"void swap_values(int& first, int& second) {
+    int temporary = first;
+    first = second;
+    second = temporary;
+}",High
+"int binary_search(const std::vector<int>& sorted_array, int target_value) {
+    int low = 0, high = sorted_array.size() - 1;
+    while (low <= high) {
+        int middle = (low + high) / 2;
+        if (sorted_array[middle] == target_value) return middle;
+        if (sorted_array[middle] < target_value) low = middle + 1;
+        else high = middle - 1;
+    }
+    return -1;
+}",High
+"bool string_starts_with(const std::string& source, const std::string& prefix) {
+    return source.compare(0, prefix.size(), prefix) == 0;
+}",High
+"int process(std::vector<int>& data, int n) {
+    int result = 0;
+    for (int i = 0; i < n; ++i) result += data[i];
+    return result;
+}",Medium
+"class Item {
+    int id;
+    double price;
+public:
+    Item(int i, double p) : id(i), price(p) {}
+    double total(int qty) { return price * qty; }
+};",Medium
+"int func(int x, int y) {
+    int temp = x;
+    x = y;
+    y = temp;
+    return x + y;
+}",Medium
+"bool check(std::vector<int>& arr) {
+    for (int i = 0; i < arr.size(); ++i) {
+        if (arr[i] < 0) return false;
+    }
+    return true;
+}",Medium
+"int calc(std::vector<int>& nums) {
+    int s = 0;
+    for (int x : nums) s += x;
+    return s;
+}",Medium
+"void update(std::map<int,int>& m, int k, int v) {
+    if (m.find(k) != m.end()) m[k] = v;
+    else m.insert({k, v});
+}",Medium
+"int find(int target, std::vector<int>& items) {
+    for (int i = 0; i < items.size(); ++i) {
+        if (items[i] == target) return i;
+    }
+    return -1;
+}",Medium
+"struct Node {
+    int val;
+    Node* next;
+    Node(int v) : val(v), next(nullptr) {}
+};",Medium
+"int sum(std::vector<int>& arr) {
+    int t = 0;
+    for (int x : arr) t += x;
+    return t;
+}",Medium
+"void sort_arr(std::vector<int>& a) {
+    int n = a.size();
+    for (int i = 0; i < n; ++i)
+        for (int j = 0; j < n-1; ++j)
+            if (a[j] > a[j+1]) std::swap(a[j], a[j+1]);
+}",Medium
+"int f(int x,int y){return x*y;}",Low
+int p(std::vector<int>&a){int r=0;for(int i:a)r+=i*i;return r;},Low
+"class C{public:int x,y;void m(int a,int b){x+=a;y+=b;}};",Low
+std::vector<int> q(std::vector<int>&l){std::vector<int>r;for(int x:l)if(x>0)r.push_back(x);return r;},Low
+int g(int n){if(n<2)return n;return g(n-1)+g(n-2);},Low
+int h(std::string s){int r=0;for(char c:s)r+=c;return r;},Low
+"int x(int a,int b){return a>b?a:b;}",Low
+void t(std::string&s){for(char&c:s)c=toupper(c);},Low
+int z(int n){int s=0;for(int i=1;i<=n;++i)s+=i;return s;},Low
+"int m(std::map<int,int>&d){int s=0;for(auto&p:d)s+=p.second;return s;}",Low

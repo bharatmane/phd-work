@@ -18,8 +18,14 @@ export function HeroSection() {
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
-              to="/thesis-story"
+              to="/demo"
               className="rounded-full bg-cyan-300 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200"
+            >
+              ⚡ Try Live Demo
+            </Link>
+            <Link
+              to="/thesis-story"
+              className="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
             >
               The Research Story
             </Link>

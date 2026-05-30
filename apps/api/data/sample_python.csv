@@ -1,0 +1,134 @@
+code,readability_level
+"def calculate_total_price(item_prices, tax_rate):
+    subtotal = sum(item_prices)
+    return subtotal * (1 + tax_rate)",High
+"def get_user_by_email(email_address, user_database):
+    for user_record in user_database:
+        if user_record['email'] == email_address:
+            return user_record
+    return None",High
+"class ShoppingCart:
+    def __init__(self):
+        self.items = []
+    def add_item(self, product_name, quantity):
+        self.items.append({'name': product_name, 'qty': quantity})",High
+"def is_palindrome(input_string):
+    cleaned = input_string.lower().replace(' ', '')
+    return cleaned == cleaned[::-1]",High
+"def fibonacci_sequence(length):
+    sequence = [0, 1]
+    for index in range(2, length):
+        sequence.append(sequence[index - 1] + sequence[index - 2])
+    return sequence",High
+"def merge_sorted_lists(first_list, second_list):
+    merged_result = []
+    i, j = 0, 0
+    while i < len(first_list) and j < len(second_list):
+        if first_list[i] <= second_list[j]:
+            merged_result.append(first_list[i]); i += 1
+        else:
+            merged_result.append(second_list[j]); j += 1
+    return merged_result + first_list[i:] + second_list[j:]",High
+"def validate_email_address(email):
+    return '@' in email and '.' in email.split('@')[-1]",High
+"def count_word_occurrences(text, target_word):
+    words = text.lower().split()
+    return words.count(target_word.lower())",High
+"def reverse_linked_list(head_node):
+    previous_node = None
+    current_node = head_node
+    while current_node is not None:
+        next_node = current_node.next
+        current_node.next = previous_node
+        previous_node = current_node
+        current_node = next_node
+    return previous_node",High
+"def find_maximum_value(number_list):
+    if not number_list:
+        return None
+    return max(number_list)",High
+"def process_data(data, n):
+    result = []
+    for i in range(n):
+        temp = data[i] * 2
+        result.append(temp)
+    return result",Medium
+"class Item:
+    def __init__(self, n, p):
+        self.name = n
+        self.price = p
+    def total(self, qty):
+        return self.price * qty",Medium
+"def func(arr):
+    s = sum(arr)
+    avg = s / len(arr)
+    return avg",Medium
+"def check(s):
+    res = True
+    for ch in s:
+        if not ch.isalpha():
+            res = False
+    return res",Medium
+"def calc(lst):
+    a = 0
+    for x in lst:
+        a = a + x*x
+    return a",Medium
+"def sort_data(data):
+    n = len(data)
+    for i in range(n):
+        for j in range(n-1):
+            if data[j] > data[j+1]:
+                data[j], data[j+1] = data[j+1], data[j]
+    return data",Medium
+"def find(target, items):
+    for idx, x in enumerate(items):
+        if x == target:
+            return idx
+    return -1",Medium
+"class Node:
+    def __init__(self, v):
+        self.val = v
+        self.next = None",Medium
+"def update(d, k, v):
+    if k in d:
+        d[k] = v
+    else:
+        d[k] = v
+    return d",Medium
+"def sum_list(arr):
+    total = 0
+    for x in arr:
+        total += x
+    return total",Medium
+"def f(x,y,z):
+    return x*y+z",Low
+"def p(a):
+    r=0
+    for i in a:r+=i*i
+    return r",Low
+"class C:
+    def __init__(s):s.x=0;s.y=0
+    def m(s,d):s.x+=d[0];s.y+=d[1]",Low
+"def q(l):
+    return [x for x in l if x>0]",Low
+"def g(n):
+    if n<2:return n
+    return g(n-1)+g(n-2)",Low
+"def h(s,t):
+    return [c for c in s if c not in t]",Low
+"def x(a,b):
+    if a>b:return a
+    else:return b",Low
+"def m(d):
+    k=list(d.keys())
+    v=list(d.values())
+    return [(k[i],v[i]) for i in range(len(k))]",Low
+"def t(s):
+    r=''
+    for c in s:r+=c.upper()
+    return r",Low
+"def z(n):
+    s=0
+    for i in range(1,n+1):s+=i
+    return s",Low

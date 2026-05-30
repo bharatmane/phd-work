@@ -12,6 +12,7 @@ import { PaperDetail } from "./pages/PaperDetail";
 import { Papers } from "./pages/Papers";
 import { Publications } from "./pages/Publications";
 import { ThesisIntegration } from "./pages/ThesisIntegration";
+import { DemoPage } from "./pages/DemoPage";
 
 export default function App() {
   return (
@@ -30,6 +31,10 @@ export default function App() {
           <Route path="/thesis-integration" element={<ThesisIntegration />} />
           <Route path="/publications" element={<Publications />} />
           <Route path="/about" element={<About />} />
+          {/* Demo hub — tabs handled inside DemoPage */}
+          <Route path="/demo" element={<DemoPage />} />
+          <Route path="/demo/samples" element={<DemoPage />} />
+          <Route path="/demo/experiments" element={<DemoPage />} />
         </Routes>
       </PageShell>
     </BrowserRouter>
