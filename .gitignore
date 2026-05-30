@@ -1,9 +1,14 @@
 node_modules/
 dist/
 .vite/
+.DS_Store
 
-site/node_modules/
-site/dist/
-site/.vite/
+apps/web/node_modules/
+apps/web/dist/
+apps/web/.vite/
+
+packages/thesis-core/.venv/
+packages/thesis-core/.pytest_cache/
+packages/thesis-core/__pycache__/
 
 legacy/phd-workspace/src/python/.venv/

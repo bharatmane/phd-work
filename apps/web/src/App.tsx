@@ -1,0 +1,37 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { PageShell } from "./layout/PageShell";
+import { About } from "./pages/About";
+import { Home } from "./pages/Home";
+import { IrafXadlPage } from "./pages/IrafXadlPage";
+import { IrafXadlAnimated } from "./pages/IrafXadlAnimated";
+import { EcrvrMvelAnimated } from "./pages/EcrvrMvelAnimated";
+import { EesqaDelmoaAnimated } from "./pages/EesqaDelmoaAnimated";
+import { ThesisStory } from "./pages/ThesisStory";
+import { Methodology } from "./pages/Methodology";
+import { PaperDetail } from "./pages/PaperDetail";
+import { Papers } from "./pages/Papers";
+import { Publications } from "./pages/Publications";
+import { ThesisIntegration } from "./pages/ThesisIntegration";
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <PageShell>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/methodology" element={<Methodology />} />
+          <Route path="/methodology/iraf-xadl" element={<IrafXadlPage />} />
+          <Route path="/papers" element={<Papers />} />
+          <Route path="/papers/:paperId" element={<PaperDetail />} />
+          <Route path="/papers/iraf-xadl/animated" element={<IrafXadlAnimated />} />
+          <Route path="/papers/paper-2/animated" element={<EcrvrMvelAnimated />} />
+          <Route path="/papers/paper-3/animated" element={<EesqaDelmoaAnimated />} />
+          <Route path="/thesis-story" element={<ThesisStory />} />
+          <Route path="/thesis-integration" element={<ThesisIntegration />} />
+          <Route path="/publications" element={<Publications />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </PageShell>
+    </BrowserRouter>
+  );
+}
