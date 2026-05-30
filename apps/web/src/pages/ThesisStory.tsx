@@ -202,7 +202,7 @@ export function ThesisStory() {
         </span>
         <h1 className="font-display text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
           Three Papers.
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-violet-400 to-teal-400 mt-2">
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-violet-300 mt-2">
             One Bigger Goal.
           </span>
         </h1>
@@ -226,27 +226,27 @@ export function ThesisStory() {
         <div className="relative flex flex-col items-center gap-0">
           {[
             {
-              paper: "Paper 1 · IRAF-XADL",
+              paper: "Paper 1 — Identifier Readability",
               level: "Identifier Level",
               example: "calculateTotalAmountForUser",
               question: "Is this name readable?",
-              width: "w-48",
+              width: "w-72",
               color: "border-cyan-500/40 bg-cyan-500/10",
               badge: "text-cyan-300",
               delay: 0,
             },
             {
-              paper: "Paper 2 · ECRVR-MVEL",
+              paper: "Paper 2 — Code Comprehension",
               level: "Code Block Level",
               example: "def isPalindrome(self, x): ...",
               question: "Is this function readable?",
-              width: "w-72",
+              width: "w-80",
               color: "border-violet-500/40 bg-violet-500/10",
               badge: "text-violet-300",
               delay: 200,
             },
             {
-              paper: "Paper 3 · EESQA-DELMOA",
+              paper: "Paper 3 — Developer Quality",
               level: "Developer Level",
               example: "Author of 73 commits, 3 projects",
               question: "Is this developer experienced?",
@@ -264,7 +264,7 @@ export function ThesisStory() {
               <div className={`${width} mx-auto rounded-2xl border ${color} p-5 text-center`}>
                 <div className={`font-mono text-xs tracking-widest ${badge} mb-1`}>{paper}</div>
                 <div className="text-white font-semibold text-sm mb-2">{level}</div>
-                <div className="font-mono text-slate-400 text-xs bg-black/30 rounded-lg px-3 py-2 mb-2">{example}</div>
+                <div className="font-mono text-slate-400 text-xs bg-black/30 rounded-lg px-3 py-2 mb-2 overflow-hidden text-ellipsis whitespace-nowrap">{example}</div>
                 <div className="text-slate-300 text-sm italic">"{question}"</div>
               </div>
             </div>
