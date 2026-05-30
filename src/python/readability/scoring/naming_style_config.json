@@ -1,0 +1,98 @@
+{
+  "python": {
+    "variable": {
+      "regex": "^[a-z_][a-z0-9_]*$",
+      "weights": { "regex": 0.4, "forbidden": 0.2, "project": 0.1, "pos": 0.2, "length": 0.1 }
+    },
+    "function": {
+      "regex": "^[a-z_][a-z0-9_]*$",
+      "weights": { "regex": 0.4, "forbidden": 0.2, "project": 0.1, "pos": 0.2, "length": 0.1 }
+    },
+    "class": {
+      "regex": "^[A-Z][a-zA-Z0-9]*$",
+      "weights": { "regex": 0.4, "forbidden": 0.2, "project": 0.1, "pos": 0.2, "length": 0.1 }
+    },
+    "constant": {
+      "regex": "^[A-Z][A-Z0-9_]*$",
+      "weights": { "regex": 0.4, "forbidden": 0.2, "project": 0.1, "pos": 0.2, "length": 0.1 }
+    }
+  },
+  "java": {
+    "variable": {
+      "regex": "^[a-z][a-zA-Z0-9]*$",
+      "weights": { "regex": 0.4, "forbidden": 0.2, "project": 0.1, "pos": 0.2, "length": 0.1 }
+    },
+    "method": {
+      "regex": "^[a-z][a-zA-Z0-9]*$",
+      "weights": { "regex": 0.4, "forbidden": 0.2, "project": 0.1, "pos": 0.2, "length": 0.1 }
+    },
+    "class": {
+      "regex": "^[A-Z][a-zA-Z0-9]*$",
+      "weights": { "regex": 0.4, "forbidden": 0.2, "project": 0.1, "pos": 0.2, "length": 0.1 }
+    },
+    "constant": {
+      "regex": "^[A-Z][A-Z0-9_]*$",
+      "weights": { "regex": 0.4, "forbidden": 0.2, "project": 0.1, "pos": 0.2, "length": 0.1 }
+    }
+  },
+  "javascript": {
+    "variable": {
+      "regex": "^[a-z][a-zA-Z0-9]*$",
+      "weights": { "regex": 0.4, "forbidden": 0.2, "project": 0.1, "pos": 0.2, "length": 0.1 }
+    },
+    "function": {
+      "regex": "^[a-z][a-zA-Z0-9]*$",
+      "weights": { "regex": 0.4, "forbidden": 0.2, "project": 0.1, "pos": 0.2, "length": 0.1 }
+    },
+    "class": {
+      "regex": "^[A-Z][a-zA-Z0-9]*$",
+      "weights": { "regex": 0.4, "forbidden": 0.2, "project": 0.1, "pos": 0.2, "length": 0.1 }
+    },
+    "constant": {
+      "regex": "^[A-Z][A-Z0-9_]*$",
+      "weights": { "regex": 0.4, "forbidden": 0.2, "project": 0.1, "pos": 0.2, "length": 0.1 }
+    }
+  },
+  "forbidden_patterns": [
+    "^m_",
+    "^sz",
+    ".*(_[A-Z][a-z])",
+    ".*[ -]",
+    "^\\d"
+  ],
+  "allowed_prefixes": {
+    "csharp": { "interface": ["I"] }
+  },
+  "allowed_suffixes": {
+    "java": { "class": ["Service", "Controller", "Impl"] }
+  },
+  "forbidden_abbreviations": ["usr", "nmbr", "custm"],
+  "allowed_abbreviations": ["id", "cfg", "tmp"],
+  "exceptions": {
+    "identifiers": ["q", "r", "x"],
+    "patterns": ["^__init__$", "^main$"]
+  },
+  "length_limits": {
+    "variable": { "min": 2, "max": 25 },
+    "function": { "min": 2, "max": 30 }
+  },
+  "project_terms": {
+    "myproject": ["dao", "service", "controller"],
+    "anotherproject": ["api", "model", "dto"]
+  },
+  "project_overrides": {
+    "myproject": {
+      "variable": {
+        "regex": "^[a-z][a-zA-Z0-9]*$",
+        "weights": { "regex": 0.6, "forbidden": 0.15, "project": 0.1, "pos": 0.1, "length": 0.05 }
+      },
+      "forbidden_patterns": ["temp", "foo", "bar"]
+    }
+  },
+  "enforcement_flags": {
+    "pos_check_enabled": true,
+    "forbidden_pattern_check_enabled": true,
+    "length_check_enabled": true,
+    "abbreviation_check_enabled": true
+  }
+}

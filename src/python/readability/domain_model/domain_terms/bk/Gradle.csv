@@ -1,0 +1,67 @@
+Domain,Term,Type
+Gradle,--daemon,Noun
+Gradle,--debug,Noun
+Gradle,--offline,Noun
+Gradle,--parallel,Noun
+Gradle,--scan,Noun
+Gradle,-P (project property),Noun
+Gradle,Android plugin,Noun
+Gradle,Ant,Noun
+Gradle,Build Cache,Noun
+Gradle,Build Script,Noun
+Gradle,Build scan,Noun
+Gradle,Build.gradle,Noun
+Gradle,CompileJava,Verb
+Gradle,Composite build,Noun
+Gradle,Daemoon (Gradle Daemon),Noun
+Gradle,Dependencies,Verb
+Gradle,Dependency,Noun
+Gradle,Gradle,Noun
+Gradle,Gradle Daemon,Noun
+Gradle,Gradle Enterprise,Noun
+Gradle,Gradle Plugin,Noun
+Gradle,Gradle Wrapper,Noun
+Gradle,Groovy DSL,Noun
+Gradle,IDEA,Noun
+Gradle,Init,Verb
+Gradle,JAR,Noun
+Gradle,Java plugin,Noun
+Gradle,JavaExec,Noun
+Gradle,Jcenter,Noun
+Gradle,Kotlin DSL,Noun
+Gradle,Library plugin,Noun
+Gradle,LocalRepository,Noun
+Gradle,Maven plugin,Noun
+Gradle,Multi-project,Noun
+Gradle,MutableProjectState,Noun
+Gradle,Plugins,Noun
+Gradle,Project,Noun
+Gradle,Project dependencies,Noun
+Gradle,Project.ext,Noun
+Gradle,Settings.gradle,Noun
+Gradle,SourceSet,Noun
+Gradle,Task,Noun
+Gradle,TaskAction,Noun
+Gradle,TaskGraph,Noun
+Gradle,Test,Verb
+Gradle,Wrapper,Noun
+Gradle,assemble,Verb
+Gradle,bootRun,Verb
+Gradle,build,Verb
+Gradle,check,Verb
+Gradle,clean,Verb
+Gradle,configuration cache,Noun
+Gradle,dependencies task,Noun
+Gradle,dependencyInsight,Noun
+Gradle,fluent API,Noun
+Gradle,gradlew,Noun
+Gradle,init script,Noun
+Gradle,library,Noun
+Gradle,plugin portal,Noun
+Gradle,plugins { } block,Noun
+Gradle,settings file,Noun
+Gradle,sourceCompatibility,Noun
+Gradle,task dependencies,Noun
+Gradle,transitive dependency,Noun
+Gradle,up-to-date check,Noun
+Gradle,wrapper JAR,Noun
