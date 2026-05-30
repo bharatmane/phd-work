@@ -1,10 +1,6 @@
 pipeline {
   agent any
 
-  tools {
-    nodejs 'node20'   // matches the name you set in Step 3
-  }
-
   environment {
     WEB_DIST      = 'apps/web/dist'
     WEB_ROOT      = '/var/www/phd'
