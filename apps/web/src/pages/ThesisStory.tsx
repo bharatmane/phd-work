@@ -35,7 +35,7 @@ const papers = [
     classifier: "Self-Attention BiLSTM (SA-BiLSTM)",
     xai: "SHAP — global feature attribution",
     optimizer: "AdamW",
-    output: "Binary: Readable / Unreadable",
+    output: "Ternary: High / Medium / Low",
     dataset: "Code Snippets: Insights & Readability (Kaggle)",
     bestAcc: "98.42%",
     lang: "Python & C++",
@@ -343,7 +343,7 @@ export function ThesisStory() {
                 ["Classifier", "SA-BiLSTM (single)", "GCN+DBN+BiTCN (ensemble)", "SSNN (spiking)"],
                 ["XAI Method", "SHAP (global)", "LIME (local)", "AMBOA (optimization-based)"],
                 ["Optimizer", "AdamW", "Nadam", "AMBOA"],
-                ["Output Classes", "2 (binary)", "3 (High/Med/Low)", "6 (experience levels)"],
+                ["Output Classes", "3 (High/Med/Low)", "3 (High/Med/Low)", "6 (experience levels)"],
                 ["Dataset", "Code Snippets (Kaggle)", "Code Snippets (Kaggle)", "Developer dataset (Zenodo)"],
                 ["Best Accuracy", "98.42% (C++)", "98.38% (C++)", "98.74% (overall)"],
               ].map(([dim, p1, p2, p3], i) => (

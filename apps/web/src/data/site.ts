@@ -8,6 +8,8 @@ export const navLinks: NavLink[] = [
   { label: "The Story",   to: "/thesis-story" },
   { label: "Publications",to: "/publications" },
   { label: "About",       to: "/about" },
+  { label: "Synopsis",    to: "/synopsis" },
+  { label: "Thesis",      to: "/thesis" },
 ];
 
 export const researcherProfile = {
