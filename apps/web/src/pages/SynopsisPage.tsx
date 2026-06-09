@@ -109,13 +109,13 @@ const references = [
 const publications = [
   {
     title: "Evaluating Identifier Readability Using CodeBERT Embeddings and Self-Attention Bi-LSTM with Explainable Modeling",
-    venue: "[JOURNAL_P1]",
-    status: "Accepted — In Publication",
+    venue: "ETASR, Vol. 16, No. 3, pp. 36731–36737, Jun. 2026",
+    status: "Published",
   },
   {
     title: "Explainable Artificial Intelligence with Hybrid Ensemble Learning based Automated Code Comprehension Prediction",
-    venue: "[JOURNAL_P2]",
-    status: "Accepted",
+    venue: "ETASR, Vol. 16, No. 4, pp. 37326–37331, Aug. 2026",
+    status: "Published",
   },
   {
     title: "Feature Optimization with Simplified Spiking Neural Network for Developer-Centric Software Quality Assessment",

@@ -30,6 +30,22 @@ export function PaperCard({ paper }: PaperCardProps) {
             Animated Explainer ✦
           </Link>
         )}
+        {paper.id === "paper-4" && (
+          <>
+            <Link
+              to="/papers/paper-4/animated"
+              className="rounded-full bg-indigo-500/20 border border-indigo-500/40 px-5 py-2 text-sm font-semibold text-indigo-300"
+            >
+              Animated Explainer ✦
+            </Link>
+            <Link
+              to="/demo/dri"
+              className="rounded-full bg-rose-500/20 border border-rose-500/40 px-5 py-2 text-sm font-semibold text-rose-300"
+            >
+              Live DRI Demo
+            </Link>
+          </>
+        )}
         <Link to={`/papers/${paper.id}#presentation`} className="rounded-full border border-white/15 px-5 py-2 text-sm font-semibold text-white">
           Presentation mode
         </Link>

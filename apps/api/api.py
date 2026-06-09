@@ -90,15 +90,52 @@ def _normalize_structural(raw: dict[str, float], stats: dict) -> np.ndarray:
     return np.array(vec, dtype=np.float32)
 
 
+DEMO_MODE = not CHECKPOINT.exists()
+
+
+def _demo_predict(code: str) -> dict:
+    """Return realistic pre-computed scores when model checkpoint is absent."""
+    idents = extract_and_normalise(code, "python")
+    # Score readability heuristically from avg identifier token length
+    avg_len = sum(len(i.raw) for i in idents) / max(len(idents), 1)
+    p_high = round(min(0.97, max(0.35, (avg_len - 2) / 14)), 4)
+    p_low  = round(max(0.01, 0.95 - p_high), 4)
+    p_med  = round(max(0.01, 1.0 - p_high - p_low), 4)
+    label  = "High" if p_high > 0.65 else "Medium" if p_high > 0.40 else "Low"
+    feat_names = ["MC","NC","OL","DR","PR","LF","CC","SA","CLS","PRED"]
+    feats = {n: round(p_high * (0.85 + 0.15 * (i / 9)), 3) for i, n in enumerate(feat_names)}
+    struct = _compute_structural(code)
+    return {
+        "label": label, "confidence": p_high,
+        "probabilities": {"High": p_high, "Medium": p_med, "Low": p_low},
+        "identifiers": [
+            {"name": id_.raw, "kind": id_.kind, "tokens": id_.tokens,
+             "features": {n: round(p_high * (0.8 + 0.2 * (j/9)), 3) for j,n in enumerate(feat_names)},
+             "attention_weight": round(1/max(len(idents),1), 4),
+             "influence": "High" if p_high > 0.75 else "Medium"}
+            for id_ in idents[:8]
+        ],
+        "structural": {k: round(float(v), 3) for k, v in struct.items()},
+        "explanation": (
+            f"[DEMO MODE — no model checkpoint] Heuristic estimate: {label} readability "
+            f"({p_high*100:.1f}% confidence) based on identifier naming quality. "
+            f"Deploy the trained model for accurate predictions."
+        ),
+        "identifier_quality_score": p_high,
+        "identifier_quality_label": label,
+    }
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    if DEMO_MODE:
+        logger.warning("Checkpoint not found — starting in DEMO MODE (heuristic scores only)")
+        _state["demo"] = True
+        yield
+        _state.clear()
+        return
+
     logger.info("Loading checkpoint: %s", CHECKPOINT)
-    if not CHECKPOINT.exists():
-        raise RuntimeError(
-            f"Checkpoint not found at {CHECKPOINT}. "
-            "Run: python train.py --data data/kaggle_augmented.csv "
-            "--epochs 100 --save artifacts/iraf_xadl_augmented.pt"
-        )
     ckpt = torch.load(CHECKPOINT, map_location="cpu")
     struct_dim = ckpt.get("struct_dim", 7)
     norm_stats = ckpt.get("norm_stats", {})
@@ -137,6 +174,31 @@ class PredictRequest(BaseModel):
     language: str = "python"
 
 
+class BatchPredictRequest(BaseModel):
+    samples: list[PredictRequest]
+
+
+class DriRequest(BaseModel):
+    code: str
+    language: str = "python"
+    pass_ratio: float | None = None   # 0.0–1.0; None = unknown
+
+
+class DriResponse(BaseModel):
+    readability_label: str
+    readability_confidence: float
+    p_high: float
+    p_medium: float
+    p_low: float
+    pass_ratio: float | None
+    dri: float | None                 # None when pass_ratio unknown
+    dri_tier: str                     # "unknown" | "safe" | "low" | "moderate" | "critical"
+    dri_message: str
+    identifier_quality_score: float
+    features: dict[str, float]        # mean of each of the 10 params across identifiers
+    explanation: str
+
+
 class IdentifierInfo(BaseModel):
     name: str
     kind: str
@@ -163,11 +225,15 @@ class PredictResponse(BaseModel):
 
 @app.get("/health")
 def health():
-    return {"status": "ok", "model_loaded": "model" in _state}
+    return {"status": "ok", "model_loaded": not _state.get("demo", False),
+            "demo_mode": _state.get("demo", False)}
 
 
 @app.post("/predict", response_model=PredictResponse)
 def predict(req: PredictRequest):
+    if _state.get("demo"):
+        d = _demo_predict(req.code)
+        return PredictResponse(**d)
     if "model" not in _state:
         raise HTTPException(503, "Model not loaded yet.")
 
@@ -351,6 +417,77 @@ def _build_explanation(label: str, probs: np.ndarray,
             )
 
     return " ".join(lines_text)
+
+
+@app.post("/batch")
+def batch_predict(req: BatchPredictRequest) -> list[PredictResponse]:
+    """Score multiple code samples in one call. Returns results in the same order."""
+    return [predict(s) for s in req.samples]
+
+
+@app.post("/dri", response_model=DriResponse)
+def compute_dri(req: DriRequest):
+    """
+    Compute Deceptive Readability Index for a code sample.
+
+    DRI = P_High × (1 − pass_ratio)
+
+    If pass_ratio is omitted the DRI is not computed but readability scores
+    are still returned — useful for the interactive website demo.
+    """
+    result = predict(PredictRequest(code=req.code, language=req.language))
+
+    p_high = result.probabilities.get("High", 0.0)
+    p_medium = result.probabilities.get("Medium", 0.0)
+    p_low = result.probabilities.get("Low", 0.0)
+
+    if req.pass_ratio is not None:
+        dri = round(p_high * (1.0 - req.pass_ratio), 4)
+        if dri == 0.0:
+            tier = "safe"
+            msg = "No deception risk — code is either unreadable or fully correct."
+        elif dri < 0.3:
+            tier = "low"
+            msg = "Low deception risk. High readability but minor test failures."
+        elif dri < 0.6:
+            tier = "moderate"
+            msg = "Moderate deception risk. Readable code failing a significant share of tests."
+        else:
+            tier = "critical"
+            msg = (
+                f"Critical deception risk (DRI={dri:.2f}). "
+                "This code scores HIGH readability but fails most tests — "
+                "a human reviewer may trust it without adequate verification."
+            )
+    else:
+        dri = None
+        tier = "unknown"
+        msg = (
+            f"Readability scored as {result.label} ({result.confidence*100:.1f}% confidence). "
+            "Provide pass_ratio to compute the full DRI."
+        )
+
+    # Mean of each feature across identifiers
+    mean_features: dict[str, float] = {}
+    if result.identifiers:
+        for fname in FEATURE_NAMES:
+            vals = [id_.features.get(fname, 0.0) for id_ in result.identifiers]
+            mean_features[fname] = round(sum(vals) / len(vals), 4)
+
+    return DriResponse(
+        readability_label=result.label,
+        readability_confidence=result.confidence,
+        p_high=round(p_high, 4),
+        p_medium=round(p_medium, 4),
+        p_low=round(p_low, 4),
+        pass_ratio=req.pass_ratio,
+        dri=dri,
+        dri_tier=tier,
+        dri_message=msg,
+        identifier_quality_score=result.identifier_quality_score,
+        features=mean_features,
+        explanation=result.explanation,
+    )
 
 
 # ---------------------------------------------------------------------------

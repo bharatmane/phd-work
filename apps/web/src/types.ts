@@ -24,7 +24,7 @@ export type ReadabilityParameter = {
 export type Paper = {
   id: string;
   title: string;
-  status: "Draft" | "Submitted" | "Accepted" | "Accepted — In Proof" | "Published";
+  status: "Draft" | "Draft — Under Submission" | "Submitted" | "Accepted" | "Accepted — In Proof" | "Published";
   problem: string;
   method: string;
   keyContribution: string;

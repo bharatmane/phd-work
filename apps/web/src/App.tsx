@@ -15,6 +15,7 @@ import { Papers } from "./pages/Papers";
 import { Publications } from "./pages/Publications";
 import { ThesisIntegration } from "./pages/ThesisIntegration";
 import { DemoPage } from "./pages/DemoPage";
+import { DriAnimated } from "./pages/DriAnimated";
 
 export default function App() {
   return (
@@ -39,6 +40,8 @@ export default function App() {
           <Route path="/demo" element={<DemoPage />} />
           <Route path="/demo/samples" element={<DemoPage />} />
           <Route path="/demo/experiments" element={<DemoPage />} />
+          <Route path="/demo/dri" element={<DemoPage />} />
+          <Route path="/papers/paper-4/animated" element={<DriAnimated />} />
         </Routes>
       </PageShell>
     </BrowserRouter>

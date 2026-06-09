@@ -3,7 +3,7 @@
 #        Identifier Readability, Code Snippet Analysis, and Developer Experience Classification
 #
 # PLACEHOLDERS TO FILL BEFORE SUBMISSION:
-#   [REG_NO]      - PhD Registration Number
+#   [REG_NO]      - PhD Permanent Registration Number (PRN) — FILLED: 20030145CSE003
 #   [YEAR]        - Year of submission (e.g., 2026)
 #   [JOURNAL_P1]  - Journal name where IRAF-XADL is accepted
 #   [JOURNAL_P2]  - Journal name where ECRVR-MVEL is accepted
@@ -23,7 +23,7 @@ In Faculty of Engineering and Technology
 
 By
 BHARAT BABASO MANE
-[REG_NO]
+PRN: 20030145CSE003
 
 Under the Supervision of
 Dr. Rathnakar Achary
@@ -335,5 +335,5 @@ Taken together, the three studies establish that program comprehension can be as
 
 *End of Synopsis Draft v1*
 *Prepared: 2026-05-30*
-*Placeholders remaining: [REG_NO], [YEAR], [JOURNAL_P1], [JOURNAL_P2], [P3_STATUS], [RAC_MEMBER1], [RAC_MEMBER2]*
+*Placeholders remaining: [YEAR], [JOURNAL_P1], [JOURNAL_P2], [P3_STATUS], [RAC_MEMBER1], [RAC_MEMBER2]*
 *Word count (approximate): ~7,800 words — expanded beyond the Annexure 10 draft limit to add full technical detail for Study 2 and Study 3 methodologies; trim to ≤6,000 words before formal submission by condensing Sections 3 and 6 as needed*

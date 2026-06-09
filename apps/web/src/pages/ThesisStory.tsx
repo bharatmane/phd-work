@@ -24,6 +24,33 @@ function Section({ children, className = "" }: { children: React.ReactNode; clas
 /* ── Data ────────────────────────────────────────────────────────── */
 const papers = [
   {
+    num: "04", id: "paper-4",
+    title: "DRI",
+    full: "Deceptive Readability in LLM-Generated Code",
+    question: "Does readable AI code signal correctness — or deceive?",
+    level: "AI Trust Level",
+    levelDesc: "LLM-generated code quality in the agentic era",
+    input: "2,710 Python solutions — HumanEval+ & MBPP+",
+    features: "IRAF-XADL 10 params (Papers 1 & 2 as instrument)",
+    classifier: "SA-BiLSTM + DRI = P_High × (1 − pass_ratio)",
+    xai: "Per-parameter attribution (RQ4)",
+    optimizer: "Mann-Whitney U + Logistic Regression",
+    output: "DRI [0-1] — Safe / Low / Moderate / Critical",
+    dataset: "HumanEval+ (164) + MBPP+ (378) via EvalPlus",
+    bestAcc: "AUC < 0.65 (expected — confirms H2)",
+    lang: "Python",
+    status: "Draft — IEEE Access (Scopus Q1)",
+    color: "from-indigo-500 to-rose-600",
+    border: "border-indigo-500/30",
+    bg: "bg-indigo-500/5",
+    badge: "bg-indigo-500/20 text-indigo-300",
+    accent: "text-indigo-400",
+    glow: "shadow-indigo-500/10",
+    animateTo: "/papers/paper-4/animated",
+    icon: "⚠",
+    isDraft: true,
+  },
+  {
     num: "01", id: "iraf-xadl",
     title: "IRAF-XADL",
     full: "Identifier Readability via Explainable Deep Learning",
@@ -65,7 +92,7 @@ const papers = [
     dataset: "Code Snippets: Insights & Readability (Kaggle)",
     bestAcc: "98.38%",
     lang: "Python & C++",
-    status: "Accepted — ETASR (In Proof)",
+    status: "Published — ETASR Vol.16 No.4",
     color: "from-violet-500 to-violet-700",
     border: "border-violet-500/30",
     bg: "bg-violet-500/5",
@@ -104,34 +131,39 @@ const papers = [
 ];
 
 const sharedFoundations = [
-  { label: "CodeBERT", desc: "Papers 1 & 2 both use CodeBERT as the embedding backbone", papers: [1, 2], color: "bg-cyan-400" },
-  { label: "XAI Philosophy", desc: "All 3 papers produce interpretable, explainable predictions (SHAP, LIME, bio-inspired)", papers: [1, 2, 3], color: "bg-violet-400" },
-  { label: "Same Dataset", desc: "Papers 1 & 2 both use the Code Snippets: Insights & Readability dataset", papers: [1, 2], color: "bg-emerald-400" },
-  { label: "Python & C++", desc: "Papers 1 & 2 both evaluate on Python and C++ codebases", papers: [1, 2], color: "bg-amber-400" },
-  { label: "Deep Learning", desc: "All 3 papers use deep learning architectures for classification", papers: [1, 2, 3], color: "bg-rose-400" },
-  { label: "≥98% Accuracy", desc: "All 3 papers achieve ≥98% accuracy on their respective benchmarks", papers: [1, 2, 3], color: "bg-teal-400" },
+  { label: "CodeBERT", desc: "Papers 1 & 2 use CodeBERT as the embedding backbone. Paper 4 uses IRAF-XADL (built on CodeBERT) as its readability instrument.", papers: [1, 2, 4], color: "bg-cyan-400" },
+  { label: "XAI Philosophy", desc: "All papers produce interpretable predictions: SHAP (P1), LIME (P2), bio-inspired (P3), per-parameter DRI attribution (P4).", papers: [1, 2, 3, 4], color: "bg-violet-400" },
+  { label: "Shared Dataset", desc: "Papers 1 & 2 use the Code Snippets: Insights & Readability dataset. Paper 4 uses HumanEval+ and MBPP+ (LLM-era benchmarks).", papers: [1, 2], color: "bg-emerald-400" },
+  { label: "Python Coverage", desc: "Papers 1, 2, and 4 all evaluate on Python codebases as primary language.", papers: [1, 2, 4], color: "bg-amber-400" },
+  { label: "Deep Learning", desc: "All four papers use deep learning architectures for their core classification or measurement task.", papers: [1, 2, 3, 4], color: "bg-rose-400" },
+  { label: "10 Cognitive Params", desc: "The MC/NC/OL/DR/PR/LF/CC/SA/CLS/PRED framework from Paper 1 is reused as the measurement instrument in Paper 4.", papers: [1, 4], color: "bg-indigo-400" },
 ];
 
 const validationLinks = [
   {
     from: "Paper 1 defines", highlight: "MC (Morphological Complexity)",
     to: "Paper 2's LIME identifies MC as the top driver of readability predictions",
-    color: "border-cyan-500/30 bg-cyan-500/5", arrow: "text-cyan-400",
+    color: "border-cyan-500/30 bg-cyan-500/5", arrow: "text-cyan-400", tag: "P1→P2",
   },
   {
     from: "Paper 1 defines", highlight: "PRED (Predictability)",
     to: "Paper 2's LIME confirms PRED is dominant for both Low and High readability classes",
-    color: "border-violet-500/30 bg-violet-500/5", arrow: "text-violet-400",
+    color: "border-violet-500/30 bg-violet-500/5", arrow: "text-violet-400", tag: "P1→P2",
   },
   {
     from: "Paper 1 defines", highlight: "NC (Naming Convention)",
     to: "Paper 2's LIME shows NC contributes positively to Low class predictions",
-    color: "border-emerald-500/30 bg-emerald-500/5", arrow: "text-emerald-400",
+    color: "border-emerald-500/30 bg-emerald-500/5", arrow: "text-emerald-400", tag: "P1→P2",
   },
   {
     from: "Papers 1 & 2 establish", highlight: "code quality is measurable by AI",
     to: "Paper 3 extends this to ask: can we predict quality from who wrote it?",
-    color: "border-teal-500/30 bg-teal-500/5", arrow: "text-teal-400",
+    color: "border-teal-500/30 bg-teal-500/5", arrow: "text-teal-400", tag: "P2→P3",
+  },
+  {
+    from: "Papers 1 & 2 provide", highlight: "the readability measurement framework",
+    to: "Paper 4 uses IRAF-XADL as the instrument to expose the readability-correctness gap in AI-generated code",
+    color: "border-indigo-500/30 bg-indigo-500/5", arrow: "text-indigo-400", tag: "P1+P2→P4",
   },
 ];
 
@@ -144,6 +176,9 @@ const thesis3Pillars = [
   },
   {
     pillar: "Guide", paper: "Paper 3", desc: "Guide project allocation by predicting developer experience from code quality signals", color: "border-teal-500/30 bg-teal-500/5 text-teal-300", icon: "→",
+  },
+  {
+    pillar: "Expose", paper: "Paper 4 ✦ Draft", desc: "Expose the deceptive readability phenomenon: LLM code that scores high on readability yet fails tests — and quantify that risk with the DRI metric", color: "border-indigo-500/30 bg-indigo-500/5 text-indigo-300", icon: "⚠",
   },
 ];
 
@@ -201,16 +236,20 @@ export function ThesisStory() {
           PhD Thesis · Animated Story
         </span>
         <h1 className="font-display text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
-          Three Papers.
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-violet-300 mt-2">
-            One Bigger Goal.
+          Three Published.
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-violet-300 to-indigo-300 mt-2">
+            One Pivoting the Field.
           </span>
         </h1>
         <p className="mx-auto max-w-2xl text-slate-300 text-xl leading-relaxed mb-4">
-          Each paper asks a different question at a different scale. Together they form a unified answer to:
+          Papers 1–3 measure, validate, and guide code quality. Paper 4 asks a harder question in the AI era:
         </p>
         <div className="mx-auto max-w-2xl rounded-2xl border border-white/15 bg-white/5 px-8 py-6 text-xl text-white font-display font-semibold leading-relaxed">
           "Can Artificial Intelligence measure, explain, and predict software quality — at every level of abstraction?"
+        </div>
+        <div className="mx-auto max-w-2xl mt-4 rounded-2xl border border-indigo-500/30 bg-indigo-500/5 px-8 py-5 text-base text-indigo-200 font-semibold leading-relaxed">
+          "And when AI writes the code — can we trust that readable code is actually correct?"
+          <span className="ml-2 text-xs font-mono text-indigo-400 align-middle">← Paper 4</span>
         </div>
         <div className="mt-8 flex justify-center"><div className="animate-bounce text-slate-600 text-2xl">↓</div></div>
       </div>
@@ -218,9 +257,9 @@ export function ThesisStory() {
       {/* ── 2. ZOOM OUT ────────────────────────────────────────────── */}
       <div ref={zoomRef}>
         <div className={`text-center mb-14 transition-all duration-700 ${zoomInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-          <span className="text-xs font-semibold tracking-widest text-slate-400 uppercase">The Three Levels</span>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-white mt-3">A Zoom-Out Across Abstraction</h2>
-          <p className="text-slate-400 mt-3 max-w-xl mx-auto">Each paper operates at a different granularity of the same core question.</p>
+          <span className="text-xs font-semibold tracking-widest text-slate-400 uppercase">Four Levels</span>
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-white mt-3">A Zoom-Out Across Abstraction — and a Pivot</h2>
+          <p className="text-slate-400 mt-3 max-w-xl mx-auto">Papers 1–3 zoom out from identifier to developer. Paper 4 pivots the question to the AI era.</p>
         </div>
 
         <div className="relative flex flex-col items-center gap-0">
@@ -255,6 +294,16 @@ export function ThesisStory() {
               badge: "text-teal-300",
               delay: 400,
             },
+            {
+              paper: "Paper 4 ✦ Draft — AI Code Trust",
+              level: "AI Trust Level",
+              example: "def binary_search(sorted_list, target): ...",
+              question: "Is this AI code readable AND correct — or just readable?",
+              width: "w-full max-w-2xl",
+              color: "border-indigo-500/40 bg-indigo-500/10 border-dashed",
+              badge: "text-indigo-300",
+              delay: 600,
+            },
           ].map(({ paper, level, example, question, width, color, badge, delay }, i) => (
             <div key={paper} className="flex flex-col items-center w-full"
               style={{ transitionDelay: `${delay}ms`, opacity: zoomInView ? 1 : 0, transform: zoomInView ? "scaleX(1)" : "scaleX(0.3)", transition: "all 0.8s ease" }}>
@@ -278,7 +327,7 @@ export function ThesisStory() {
           <span className="text-xs font-semibold tracking-widest text-slate-400 uppercase">Paper by Paper</span>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-white mt-3">What Each Paper Does</h2>
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
           {papers.map(({ num, title, full, question, level, levelDesc, input, features, classifier, xai, optimizer, output, bestAcc, status, border, bg, badge, accent, animateTo, icon }, i) => (
             <div key={num}
               className={`rounded-2xl border ${border} ${bg} p-6 flex flex-col transition-all duration-700`}
@@ -377,7 +426,7 @@ export function ThesisStory() {
               <p className="text-slate-400 text-xs leading-relaxed mb-3">{desc}</p>
               <div className="flex gap-2">
                 {ps.map(p => (
-                  <span key={p} className={`rounded-full px-2 py-0.5 text-xs font-mono ${p === 1 ? "bg-cyan-500/20 text-cyan-300" : p === 2 ? "bg-violet-500/20 text-violet-300" : "bg-teal-500/20 text-teal-300"}`}>
+                  <span key={p} className={`rounded-full px-2 py-0.5 text-xs font-mono ${p === 1 ? "bg-cyan-500/20 text-cyan-300" : p === 2 ? "bg-violet-500/20 text-violet-300" : p === 3 ? "bg-teal-500/20 text-teal-300" : "bg-indigo-500/20 text-indigo-300"}`}>
                     P{p}
                   </span>
                 ))}
@@ -399,11 +448,11 @@ export function ThesisStory() {
           </p>
         </div>
         <div className="space-y-4">
-          {validationLinks.map(({ from, highlight, to, color, arrow }, i) => (
+          {validationLinks.map(({ from, highlight, to, color, arrow, tag }, i) => (
             <div key={highlight}
               className={`rounded-xl border ${color} p-5 flex gap-5 items-start transition-all duration-600`}
               style={{ transitionDelay: `${i * 120}ms`, opacity: valInView ? 1 : 0, transform: valInView ? "translateX(0)" : "translateX(-30px)" }}>
-              <div className={`shrink-0 font-mono text-xs ${arrow} mt-1`}>P1→P2</div>
+              <div className={`shrink-0 font-mono text-xs ${arrow} mt-1`}>{tag}</div>
               <div>
                 <span className="text-slate-400 text-sm">{from} </span>
                 <strong className="text-white">{highlight}</strong>
@@ -419,10 +468,10 @@ export function ThesisStory() {
       <div ref={pillarsRef}>
         <div className={`text-center mb-12 transition-all duration-700 ${pillarsInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <span className="text-xs font-semibold tracking-widest text-slate-400 uppercase">Thesis Framework</span>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-white mt-3">Measure · Validate · Guide</h2>
-          <p className="text-slate-400 mt-3 max-w-xl mx-auto">Each paper serves a distinct role in the thesis argument.</p>
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-white mt-3">Measure · Validate · Guide · Expose</h2>
+          <p className="text-slate-400 mt-3 max-w-xl mx-auto">Each paper serves a distinct role in the thesis argument. Paper 4 adds the AI-era pivot.</p>
         </div>
-        <div className="grid md:grid-cols-3 gap-6 mb-10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
           {thesis3Pillars.map(({ pillar, paper, desc, color, icon }, i) => (
             <div key={pillar}
               className={`rounded-2xl border ${color} p-8 text-center transition-all duration-700`}
@@ -440,10 +489,10 @@ export function ThesisStory() {
           <div className="text-xs text-slate-500 font-mono tracking-widest mb-8 text-center">COMBINED THESIS IMPACT</div>
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { val: "3", label: "Research papers", color: "text-white" },
-              { val: "≥98%", label: "Accuracy across all", color: "text-emerald-400" },
-              { val: "3", label: "Abstraction levels", color: "text-cyan-400" },
-              { val: "XAI", label: "in every paper", color: "text-violet-400" },
+              { val: "3+1", label: "Published + 1 in progress", color: "text-white" },
+              { val: "≥98%", label: "Accuracy across P1–P3", color: "text-emerald-400" },
+              { val: "4", label: "Abstraction levels", color: "text-cyan-400" },
+              { val: "DRI", label: "New metric introduced", color: "text-indigo-400" },
             ].map(({ val, label, color }) => (
               <div key={label}>
                 <div className={`font-display text-4xl font-bold ${color} mb-2`}>{val}</div>
@@ -459,15 +508,16 @@ export function ThesisStory() {
         <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-cyan-500/8 via-violet-500/5 to-teal-500/8 p-12 text-center">
           <h2 className="font-display text-3xl font-bold text-white mb-6">The Bigger Goal</h2>
           <p className="text-slate-300 text-lg leading-relaxed max-w-2xl mx-auto mb-6">
-            AI agents now write the code. But<strong className="text-white"> who verifies the quality?</strong>
+            AI agents now write the code. But <strong className="text-white">can readable code be trusted?</strong>
           </p>
           <p className="text-slate-300 text-base leading-relaxed max-w-2xl mx-auto mb-10">
             This thesis builds the automated verification layer — measuring readability at the level of a{" "}
             <strong className="text-cyan-300">single identifier name</strong>, a{" "}
             <strong className="text-violet-300">code block</strong>, and the{" "}
-            <strong className="text-teal-300">developer or agent</strong> that produced it.
-            Software quality is not a subjective judgment. It is <strong className="text-white">measurable,
-            explainable, and predictable</strong> — regardless of whether a human or an AI wrote the code.
+            <strong className="text-teal-300">developer or agent</strong> that produced it. Paper 4 goes further:
+            it exposes how <strong className="text-indigo-300">readability itself can deceive</strong> when AI
+            writes the code. Software quality is not a subjective judgment. It is <strong className="text-white">measurable,
+            explainable, and trustworthy</strong> — only when we look beyond the surface.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link to="/papers/iraf-xadl/animated" className="rounded-full bg-cyan-500/20 border border-cyan-500/40 px-6 py-3 text-sm font-semibold text-cyan-300 hover:bg-cyan-500/30 transition-colors">
@@ -478,6 +528,9 @@ export function ThesisStory() {
             </Link>
             <Link to="/papers/paper-3/animated" className="rounded-full bg-teal-500/20 border border-teal-500/40 px-6 py-3 text-sm font-semibold text-teal-300 hover:bg-teal-500/30 transition-colors">
               Paper 3 Explainer
+            </Link>
+            <Link to="/demo/dri" className="rounded-full bg-indigo-500/20 border border-indigo-500/40 px-6 py-3 text-sm font-semibold text-indigo-300 hover:bg-indigo-500/30 transition-colors">
+              Paper 4 — DRI Demo ✦
             </Link>
             <Link to="/thesis-integration" className="rounded-full bg-white/5 border border-white/15 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-colors">
               Thesis Integration →

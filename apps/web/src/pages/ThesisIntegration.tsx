@@ -16,7 +16,7 @@ const blocks = [
     color: "border-cyan-500/20",
   },
   {
-    eyebrow: "Paper 2 · Accepted · ETASR (In Proof)",
+    eyebrow: "Paper 2 · Published · ETASR 2026",
     title: "ECRVR-MVEL — Code Block Level",
     body: "Asks: is this entire function readable — High, Medium, or Low? Uses CodeBERT + an ensemble of GCN, DBN, and BiTCN with weighted majority voting and LIME explanations. Achieves 98.38% (C++) and 98.15% (Python). Validates Paper 1's parameters independently — LIME confirms MC and PRED as dominant readability signals.",
     color: "border-violet-500/20",

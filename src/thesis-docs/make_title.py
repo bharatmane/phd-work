@@ -155,7 +155,7 @@ p = doc.add_paragraph(style=sty("Text Thesis 2"))
 p.alignment = WD_ALIGN_PARAGRAPH.CENTER
 p.paragraph_format.space_before = Pt(0)
 p.paragraph_format.space_after  = Pt(18)
-run = p.add_run("Regn. No.: [REG_NO]")
+run = p.add_run("PRN: 20030145CSE003")
 run.font.name = "Times New Roman"
 run.font.size = Pt(12)
 

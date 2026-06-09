@@ -2,11 +2,13 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { LiveDemo } from "../components/methodology/LiveDemo";
 import { SamplesPage } from "./SamplesPage";
 import { ExperimentsPage } from "./ExperimentsPage";
+import { DriDemoPage } from "./DriDemoPage";
 
 const TABS = [
   { id: "try",         label: "⚡ Try It",        path: "/demo"        },
   { id: "samples",     label: "Code Samples",     path: "/demo/samples" },
   { id: "experiments", label: "Experiment Log",   path: "/demo/experiments" },
+  { id: "dri",         label: "🔬 DRI — Paper 4", path: "/demo/dri"    },
 ];
 
 function TabBar() {
@@ -41,6 +43,7 @@ export function DemoPage() {
   const { pathname } = useLocation();
   const isSamples     = pathname.startsWith("/demo/samples");
   const isExperiments = pathname.startsWith("/demo/experiments");
+  const isDri         = pathname.startsWith("/demo/dri");
 
   return (
     <div>
@@ -56,6 +59,8 @@ export function DemoPage() {
         <SamplesPage />
       ) : isExperiments ? (
         <ExperimentsPage />
+      ) : isDri ? (
+        <DriDemoPage />
       ) : (
         <div className="mx-auto max-w-4xl px-6 py-16 md:py-20">
           <div className="mb-10">

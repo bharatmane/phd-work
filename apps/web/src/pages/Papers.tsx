@@ -7,10 +7,10 @@ export function Papers() {
     <div className="mx-auto max-w-7xl px-6 py-16 md:py-24">
       <SectionHeader
         eyebrow="Papers"
-        title="A research journey expressed as three connected papers"
-        description="Each paper addresses a different layer of the broader thesis problem while contributing to a coherent framework around identifier readability and program comprehension."
+        title="A research journey expressed as four connected papers"
+        description="Each paper addresses a different layer of the broader thesis problem. Papers 1–3 form the published core; Paper 4 is a pivot into the AI-generated code quality era — currently under submission to IEEE Access."
       />
-      <div className="mt-12 grid gap-6 lg:grid-cols-3">
+      <div className="mt-12 grid gap-6 lg:grid-cols-2 xl:grid-cols-4">
         {papers.map((paper) => (
           <PaperCard key={paper.id} paper={paper} />
         ))}

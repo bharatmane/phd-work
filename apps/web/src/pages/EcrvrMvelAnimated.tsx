@@ -215,7 +215,7 @@ export function EcrvrMvelAnimated() {
           Bharat Babaso Mane &amp; Dr. Rathnakar Achary
         </p>
         <p className="mx-auto max-w-2xl text-slate-500 text-sm mb-10">
-          Alliance School of Advance Computing, Alliance University, Bengaluru · Accepted — ETASR
+          Alliance School of Advance Computing, Alliance University, Bengaluru · Published — ETASR Vol.16 No.4
         </p>
 
         {/* acronym breakdown */}
