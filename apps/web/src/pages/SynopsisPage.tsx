@@ -119,8 +119,8 @@ const publications = [
   },
   {
     title: "Feature Optimization with Simplified Spiking Neural Network for Developer-Centric Software Quality Assessment",
-    venue: "Under Review",
-    status: "[P3_STATUS]",
+    venue: "ETASR, 2026 (in production)",
+    status: "Accepted",
   },
 ];
 

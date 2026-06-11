@@ -23,7 +23,21 @@ export function Publications() {
                 <p><span className="text-slate-400">DOI:</span> {paper.doi}</p>
               </div>
               <div className="text-sm leading-7 text-slate-300">
-                <p><span className="text-slate-400">PDF:</span> Placeholder</p>
+                <p>
+                  <span className="text-slate-400">PDF:</span>{" "}
+                  {paper.pdfUrl ? (
+                    <a
+                      href={paper.pdfUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-cyan-300 underline underline-offset-2 hover:text-cyan-200"
+                    >
+                      Download
+                    </a>
+                  ) : (
+                    "Pending"
+                  )}
+                </p>
                 <p><span className="text-slate-400">Citation:</span> {paper.citation}</p>
               </div>
             </div>

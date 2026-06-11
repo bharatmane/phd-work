@@ -41,6 +41,7 @@ export type Paper = {
   doi: string;
   citation: string;
   presentationMode: string;
+  pdfUrl?: string;
 };
 
 export type GlossaryTerm = {

@@ -168,7 +168,7 @@ export function EesqaDelmoaAnimated() {
           Bharat Babaso Mane &amp; Dr. Rathnakar Achary
         </p>
         <p className="mx-auto max-w-2xl text-slate-500 text-sm mb-10">
-          Alliance School of Advance Computing, Alliance University, Bengaluru · Submitted
+          Alliance School of Advance Computing, Alliance University, Bengaluru · Accepted — ETASR (in production)
         </p>
 
         {/* acronym */}

@@ -25,6 +25,16 @@ export function PaperDetail() {
                 Animated Explainer ✦
               </Link>
             )}
+            {paper.pdfUrl && (
+              <a
+                href={paper.pdfUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-cyan-500/20 border border-cyan-500/40 px-5 py-3 text-sm font-semibold text-cyan-300 hover:bg-cyan-500/30 transition-colors"
+              >
+                Download PDF ↓
+              </a>
+            )}
             <a href="#presentation" className="rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-white">
               Presentation mode
             </a>

@@ -118,7 +118,7 @@ const papers = [
     dataset: "Open-source developer dataset — Zenodo (703 instances)",
     bestAcc: "98.74%",
     lang: "Multi-language (repo-level)",
-    status: "Submitted",
+    status: "Accepted — ETASR (in production)",
     color: "from-teal-500 to-teal-700",
     border: "border-teal-500/30",
     bg: "bg-teal-500/5",

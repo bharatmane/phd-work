@@ -17,6 +17,14 @@ export function About() {
           <p className="text-sm leading-7 text-slate-300">{researcherProfile.university}</p>
           <p className="mt-4 text-sm leading-7 text-slate-300">Supervisor: {researcherProfile.supervisor}</p>
           <p className="mt-4 text-sm leading-7 text-slate-300">Contact: {researcherProfile.contact}</p>
+          <a
+            href="/docs/PRN_Certificate.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-flex items-center gap-2 rounded-full border border-cyan-500/40 bg-cyan-500/15 px-4 py-2 text-xs font-semibold text-cyan-300 hover:bg-cyan-500/25 transition-colors"
+          >
+            PRN Certificate (2020) ↓
+          </a>
         </GlassCard>
         <GlassCard>
           <h3 className="font-display text-2xl text-white">Research interests</h3>
