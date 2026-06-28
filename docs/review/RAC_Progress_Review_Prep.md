@@ -184,3 +184,63 @@
 ---
 
 *One-line close for the meeting:* "The framework is built, validated across three levels in Scopus venues, and already extending into the AI-code era — I'm asking the committee to confirm scope so I can move to submission."
+
+---
+
+# Appendix A — Quick Recap (refresher after time away)
+
+*Plain-English memory refresher for all papers and the overall thesis.*
+
+## The big picture (the thesis in one breath)
+
+You built **one explainable AI framework that measures how understandable code is — at three increasing levels of zoom**, then extended it to a fourth, AI-specific level:
+
+> **identifier → code snippet → developer → (AI-generated code)**
+
+The unifying idea: *program comprehension* is the biggest hidden cost in software, but it's judged manually and subjectively. You made it **measurable** (deep learning, 98%+ accuracy) **and explainable** (SHAP/LIME show *why*) — and you proved the same handful of cognitive "readability parameters" matter at every level.
+
+Thesis title restates exactly this: *Evaluating Program Comprehension through Explainable Deep Learning: A Multi-Level Framework for Identifier Readability, Code Snippet Analysis, and Developer Experience Classification.*
+
+## Paper-by-paper, in plain language
+
+### Paper 1 — IRAF-XADL · "Is this *name* readable?" ✅ Published (ETASR 16(3))
+- **Question:** Are identifier names (variables, functions, classes) easy for a human to understand?
+- **What you did:** Pulled identifiers out of code using AST parsers (LibCST for Python, Tree-Sitter for C++), cleaned them (split camelCase/snake_case, lemmatize), then scored them on **10 cognitive readability parameters** *and* fed them through **CodeBERT** (code-trained language model → 768-number vectors). A **self-attention BiLSTM** classifies readability. **SHAP** explains which parameters drove each prediction.
+- **Result:** ~98% accuracy (Python 98.13%, C++ 98.42%). Dominant signals: **MC** (Morphological Complexity) and **LF** (Lexical Familiarity).
+- **So what:** First *explainable* identifier-readability pipeline fusing cognitive science with modern code embeddings.
+
+### Paper 2 — ECRVR-MVEL · "Is this whole *function* readable?" ✅ Published (ETASR 16(4))
+- **Question:** Zoom out from a name to a whole snippet — is it High, Medium, or Low readability?
+- **What you did:** CodeBERT embeddings again, classification by a **3-model voting ensemble**: **GCN** (structure), **DBN** (probabilistic features), **BiTCN** (sequence patterns), combined by weighted majority vote. **LIME** explains predictions.
+- **Result:** ~98% accuracy (C++ 98.38%), beating classic baselines (SVM 73%, LogReg 69%).
+- **So what (the clever part):** It **independently re-confirms Paper 1** — LIME surfaces the *same* dominant parameters (MC, PRED). Deliberate triangulation: two methods, same answer = stronger thesis.
+
+### Paper 3 — EESQA-DELMOA · "Who *wrote* this, and how experienced are they?" ✅ Accepted, in production (ETASR)
+- **Question:** Zoom out to the *human* — classify a developer's experience level, and spot automated (bot) contributors.
+- **What you did:** Normalize → **BAHB** (Bio-inspired Artificial Hummingbird — *feature selection*) → **SSNN** (Simplified Spiking Neural Network — brain-like, low-compute classifier) → **AMBOA** (Adaptive Migration Butterfly Optimization — *hyperparameter tuning*).
+- **Data:** 703 developers, **6 classes**: Software Engineer, Bot, Unknown, Non-SE, Software Architect, Experienced SE.
+- **Result:** 98.74% accuracy in **8.27 seconds** — far faster than CNN/AlexNet (15–17s) while more accurate.
+- **So what:** Objective, code-driven developer-experience scoring; the **BOT class** bridges to Paper 4 (non-human authorship).
+
+### Paper 4 — DRI · "When code *looks* good but *isn't*" 📝 Under submission (IEEE Access, Q1)
+- **Question:** LLMs write polished-looking code. Does *readable* = *correct*? Developers assume yes — that's dangerous.
+- **What you did:** Ran IRAF-XADL on **2,710 LLM-generated Python solutions** (HumanEval+ / MBPP+, 5 models), each with known pass/fail. Invented **DRI = P_High × (1 − pass_ratio)** — high when code reads as "High readability" but fails its tests.
+- **Status:** Pipeline built; **results pending the experimental run**.
+- **So what:** First study measuring the **readability–correctness decoupling** in AI code; a practical CI/CD risk metric. The future-facing contribution.
+
+## Jargon decoder (acronym refresher)
+
+| Term | What it actually is |
+|------|---------------------|
+| **CodeBERT** | BERT pre-trained on code; turns code/text into 768-dim vectors. Shared backbone in P1, P2, P4. |
+| **SA-BiLSTM** | Self-Attention Bidirectional LSTM — sequence classifier in P1. |
+| **GCN / DBN / BiTCN** | The 3 ensemble members in P2: structure / probabilistic / temporal. |
+| **SSNN** | Simplified Spiking Neural Network — fast, brain-inspired classifier in P3. |
+| **BAHB / AMBOA** | Bio-inspired *feature selection* / *hyperparameter tuning* metaheuristics in P3. |
+| **SHAP / LIME** | The two explainability (XAI) methods — *why* a model predicted what it did. SHAP in P1, LIME in P2. |
+| **The 10 parameters** | MC, NC, OL, DR, PR, LF, CC, SA, CLS, PRED — cognitive readability features. **MC, LF, PRED** keep winning. |
+| **DRI** | Deceptive Readability Index = P_High × (1 − pass_ratio) — Paper 4 metric. |
+
+## The one thread that ties it together (memorize this)
+
+Each paper **zooms out one level** — name → function → human → machine — and at every level you do the same two things: **measure comprehension accurately** *and* **explain it**. Proof it's one coherent framework, not four disconnected papers: the **same cognitive parameters (MC, LF, PRED) recur across independent methods (SHAP and LIME) and independent levels.** That recurrence is the thesis's spine.
