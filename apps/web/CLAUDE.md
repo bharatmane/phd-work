@@ -18,6 +18,7 @@
 | `/thesis-integration` | `pages/ThesisIntegration.tsx` |
 | `/thesis` | `pages/ThesisPage.tsx` (password-gated) |
 | `/synopsis` | `pages/SynopsisPage.tsx` (password-gated) |
+| `/viva-prep` | `pages/VivaPrepPage.tsx` (password-gated) |
 | `/publications` | `pages/Publications.tsx` |
 | `/about` | `pages/About.tsx` |
 | `/demo` | `pages/DemoPage.tsx` (tabs: Try It / Samples / Experiments) |

@@ -2,14 +2,20 @@ import type { NavLink } from "../types";
 
 export const navLinks: NavLink[] = [
   { label: "Home",        to: "/" },
-  { label: "Methodology", to: "/methodology" },
+  { label: "The Story",   to: "/thesis-story" },
   { label: "Papers",      to: "/papers" },
   { label: "Live Demo",   to: "/demo" },
-  { label: "The Story",   to: "/thesis-story" },
   { label: "Publications",to: "/publications" },
+  {
+    label: "Documents",
+    to: "/synopsis",
+    children: [
+      { label: "Synopsis",  to: "/synopsis" },
+      { label: "Thesis",    to: "/thesis" },
+      { label: "Viva Prep", to: "/viva-prep" },
+    ],
+  },
   { label: "About",       to: "/about" },
-  { label: "Synopsis",    to: "/synopsis" },
-  { label: "Thesis",      to: "/thesis" },
 ];
 
 export const researcherProfile = {
@@ -18,6 +24,13 @@ export const researcherProfile = {
   university: "Alliance University, Bengaluru",
   supervisor: "Dr. Rathnakar Achary",
   contact: "bharat.mane@gmail.com",
+  photo: "/bharat-caricature.jpeg",
+  socialLinks: [
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/bharatmane/" },
+    { label: "GitHub", url: "https://github.com/bharatmane/" },
+    { label: "Medium", url: "https://bharatmane.medium.com/" },
+    { label: "Website", url: "https://www.bharatmane.com/" },
+  ],
   education: [
     {
       degree: "Doctor of Philosophy (PhD) — in progress",

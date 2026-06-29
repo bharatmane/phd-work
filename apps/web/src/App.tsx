@@ -4,6 +4,7 @@ import { About } from "./pages/About";
 import { Home } from "./pages/Home";
 import { SynopsisPage } from "./pages/SynopsisPage";
 import { ThesisPage } from "./pages/ThesisPage";
+import { VivaPrepPage } from "./pages/VivaPrepPage";
 import { IrafXadlPage } from "./pages/IrafXadlPage";
 import { IrafXadlAnimated } from "./pages/IrafXadlAnimated";
 import { EcrvrMvelAnimated } from "./pages/EcrvrMvelAnimated";
@@ -36,9 +37,12 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/synopsis" element={<SynopsisPage />} />
           <Route path="/thesis" element={<ThesisPage />} />
+          <Route path="/viva-prep" element={<VivaPrepPage />} />
           {/* Demo hub — tabs handled inside DemoPage */}
           <Route path="/demo" element={<DemoPage />} />
           <Route path="/demo/samples" element={<DemoPage />} />
+          <Route path="/demo/paper-2" element={<DemoPage />} />
+          <Route path="/demo/paper-3" element={<DemoPage />} />
           <Route path="/demo/experiments" element={<DemoPage />} />
           <Route path="/demo/dri" element={<DemoPage />} />
           <Route path="/papers/paper-4/animated" element={<DriAnimated />} />

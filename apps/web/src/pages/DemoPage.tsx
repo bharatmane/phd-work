@@ -3,10 +3,14 @@ import { LiveDemo } from "../components/methodology/LiveDemo";
 import { SamplesPage } from "./SamplesPage";
 import { ExperimentsPage } from "./ExperimentsPage";
 import { DriDemoPage } from "./DriDemoPage";
+import { Paper2SamplesPage } from "./Paper2SamplesPage";
+import { Paper3SamplesPage } from "./Paper3SamplesPage";
 
 const TABS = [
   { id: "try",         label: "⚡ Try It",        path: "/demo"        },
   { id: "samples",     label: "Code Samples",     path: "/demo/samples" },
+  { id: "paper2",      label: "📊 ECRVR-MVEL — Paper 2", path: "/demo/paper-2" },
+  { id: "paper3",      label: "🧬 EESQA-DELMOA — Paper 3", path: "/demo/paper-3" },
   { id: "experiments", label: "Experiment Log",   path: "/demo/experiments" },
   { id: "dri",         label: "🔬 DRI — Paper 4", path: "/demo/dri"    },
 ];
@@ -42,6 +46,8 @@ function TabBar() {
 export function DemoPage() {
   const { pathname } = useLocation();
   const isSamples     = pathname.startsWith("/demo/samples");
+  const isPaper2      = pathname.startsWith("/demo/paper-2");
+  const isPaper3      = pathname.startsWith("/demo/paper-3");
   const isExperiments = pathname.startsWith("/demo/experiments");
   const isDri         = pathname.startsWith("/demo/dri");
 
@@ -57,6 +63,10 @@ export function DemoPage() {
       {/* Tab content */}
       {isSamples ? (
         <SamplesPage />
+      ) : isPaper2 ? (
+        <Paper2SamplesPage />
+      ) : isPaper3 ? (
+        <Paper3SamplesPage />
       ) : isExperiments ? (
         <ExperimentsPage />
       ) : isDri ? (

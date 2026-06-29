@@ -1,6 +1,7 @@
 export type NavLink = {
   label: string;
   to: string;
+  children?: NavLink[];
 };
 
 export type Metric = {
@@ -42,6 +43,8 @@ export type Paper = {
   citation: string;
   presentationMode: string;
   pdfUrl?: string;
+  indexNote?: string;
+  indexUrl?: string;
 };
 
 export type GlossaryTerm = {

@@ -22,7 +22,7 @@ const blocks = [
     color: "border-violet-500/20",
   },
   {
-    eyebrow: "Paper 3 · Accepted · ETASR 2026 (in production)",
+    eyebrow: "Paper 3 · Published · ETASR 2026",
     title: "EESQA-DELMOA — Developer Level",
     body: "Asks: what experience level is the developer who wrote this, and can we detect automated (BOT) contributions? Uses BAHB feature selection + SSNN classification + AMBOA optimization across 6 classes including BOT. Achieves 98.74% accuracy in 8.27 seconds. As AI agents contribute to codebases, distinguishing human expertise from automated authorship becomes critical.",
     color: "border-teal-500/20",

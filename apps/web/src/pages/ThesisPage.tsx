@@ -297,7 +297,7 @@ function ThesisContent() {
             <ul className="mt-2 space-y-2 text-sm text-slate-400">
               <li><span className="text-emerald-400">P1 — Published</span> · IRAF-XADL identifier readability</li>
               <li><span className="text-emerald-400">P2 — Published</span> · ECRVR-MVEL ensemble readability</li>
-              <li><span className="text-amber-400">P3 — Under Review</span> · EESQA-DELMOA developer quality</li>
+              <li><span className="text-emerald-400">P3 — Published</span> · EESQA-DELMOA developer quality</li>
             </ul>
           </GlassCard>
           <GlassCard>

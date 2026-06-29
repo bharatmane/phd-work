@@ -32,6 +32,6 @@ export const contributionMetrics: Metric[] = [
   {
     label: "Published",
     value: "ETASR 2026",
-    detail: "Papers 1 and 2 published in Scopus-indexed ETASR — Vol.16 No.3 and Vol.16 No.4.",
+    detail: "Papers 1, 2, and 3 published in ETASR — Vol.16 No.3 and No.4. Scopus indexing for Paper 3 is pending.",
   },
 ];

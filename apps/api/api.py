@@ -31,6 +31,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from src.dataset import LABELS, MAX_IDS, FEAT_DIM
 from src.embeddings import EMBED_DIM, Embedder
+from src.ensemble_model import ECRVRMVEL
 from src.features import FEATURE_NAMES, compute_features
 from src.model import SABiLSTM
 from src.preprocess import extract_and_normalise
@@ -39,6 +40,7 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO, format="%(asctime)s  %(message)s")
 
 CHECKPOINT = Path("artifacts/iraf_xadl_augmented.pt")
+ECRVR_CHECKPOINT = Path("artifacts/ecrvr_mvel.pt")
 
 # ---------------------------------------------------------------------------
 # Global model state (loaded once at startup)
@@ -91,6 +93,7 @@ def _normalize_structural(raw: dict[str, float], stats: dict) -> np.ndarray:
 
 
 DEMO_MODE = not CHECKPOINT.exists()
+ECRVR_DEMO_MODE = not ECRVR_CHECKPOINT.exists()
 
 
 def _demo_predict(code: str) -> dict:
@@ -126,31 +129,76 @@ def _demo_predict(code: str) -> dict:
     }
 
 
+def _demo_predict_snippet(code: str) -> dict:
+    """Heuristic fallback for /predict-snippet when the ECRVR-MVEL checkpoint is absent."""
+    struct = _compute_structural(code)
+    # Crude heuristic: shorter, simpler snippets score higher (matches the
+    # training data's own bias — see DEMO_SAMPLES.md note on Paper 1).
+    complexity_penalty = min(0.6, struct["cyclomatic_complexity"] / 20.0)
+    length_penalty = min(0.3, struct["code_length"] / 1000.0)
+    p_high = round(max(0.05, 0.9 - complexity_penalty - length_penalty), 4)
+    p_low = round(max(0.05, complexity_penalty + length_penalty), 4)
+    p_med = round(max(0.01, 1.0 - p_high - p_low), 4)
+    label = "High" if p_high > 0.6 else "Low" if p_low > 0.45 else "Medium"
+    return {
+        "label": label,
+        "confidence": p_high if label == "High" else (p_low if label == "Low" else p_med),
+        "probabilities": {"High": p_high, "Medium": p_med, "Low": p_low},
+        "branch_probabilities": {
+            "gcn": {"High": p_high, "Medium": p_med, "Low": p_low},
+            "dbn": {"High": p_high, "Medium": p_med, "Low": p_low},
+            "bitcn": {"High": p_high, "Medium": p_med, "Low": p_low},
+        },
+        "ensemble_weights": {"gcn": 0.333, "dbn": 0.333, "bitcn": 0.334},
+        "structural": {k: round(float(v), 3) for k, v in struct.items()},
+        "methodology_note": (
+            "[DEMO MODE — no ECRVR-MVEL checkpoint] Heuristic estimate from structural "
+            "complexity only. Deploy artifacts/ecrvr_mvel.pt for real GCN+DBN+BiTCN ensemble inference."
+        ),
+    }
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    # --- IRAF-XADL (Paper 1) ---
     if DEMO_MODE:
-        logger.warning("Checkpoint not found — starting in DEMO MODE (heuristic scores only)")
+        logger.warning("IRAF-XADL checkpoint not found — starting in DEMO MODE (heuristic scores only)")
         _state["demo"] = True
-        yield
-        _state.clear()
-        return
+    else:
+        logger.info("Loading checkpoint: %s", CHECKPOINT)
+        ckpt = torch.load(CHECKPOINT, map_location="cpu")
+        struct_dim = ckpt.get("struct_dim", 7)
+        norm_stats = ckpt.get("norm_stats", {})
 
-    logger.info("Loading checkpoint: %s", CHECKPOINT)
-    ckpt = torch.load(CHECKPOINT, map_location="cpu")
-    struct_dim = ckpt.get("struct_dim", 7)
-    norm_stats = ckpt.get("norm_stats", {})
+        model = SABiLSTM(num_classes=len(LABELS), struct_dim=struct_dim)
+        model.load_state_dict(ckpt["state_dict"])
+        model.eval()
 
-    model = SABiLSTM(num_classes=len(LABELS), struct_dim=struct_dim)
-    model.load_state_dict(ckpt["state_dict"])
-    model.eval()
+        _state["model"] = model
+        _state["struct_dim"] = struct_dim
+        _state["norm_stats"] = norm_stats
 
-    logger.info("Loading CodeBERT embedder...")
-    embedder = Embedder(use_codebert=True)
+    # Shared CodeBERT embedder — needed by IRAF-XADL (if loaded) and/or ECRVR-MVEL.
+    if not DEMO_MODE or not ECRVR_DEMO_MODE:
+        logger.info("Loading CodeBERT embedder...")
+        _state["embedder"] = Embedder(use_codebert=True)
 
-    _state["model"] = model
-    _state["embedder"] = embedder
-    _state["struct_dim"] = struct_dim
-    _state["norm_stats"] = norm_stats
+    # --- ECRVR-MVEL (Paper 2) ---
+    if ECRVR_DEMO_MODE:
+        logger.warning("ECRVR-MVEL checkpoint not found — starting in DEMO MODE (heuristic scores only)")
+        _state["ecrvr_demo"] = True
+    else:
+        logger.info("Loading checkpoint: %s", ECRVR_CHECKPOINT)
+        eckpt = torch.load(ECRVR_CHECKPOINT, map_location="cpu")
+        ecrvr_model = ECRVRMVEL(struct_dim=eckpt.get("struct_dim", 7), num_classes=len(LABELS))
+        ecrvr_model.load_state_dict(eckpt["state_dict"])
+        ecrvr_model.eval()
+
+        _state["ecrvr_model"] = ecrvr_model
+        _state["ecrvr_struct_stats"] = eckpt.get("struct_stats", {})
+        _state["ecrvr_max_tokens"] = eckpt.get("max_tokens", 80)
+        _state["ecrvr_metrics"] = eckpt.get("metrics", {})
+
     logger.info("Ready.")
     yield
     _state.clear()
@@ -219,14 +267,34 @@ class PredictResponse(BaseModel):
     identifier_quality_label: str     # High / Medium / Low
 
 
+class SnippetPredictRequest(BaseModel):
+    code: str
+    language: str = "python"   # ECRVR-MVEL v1 is Python-only; see Paper2SamplesPage
+
+
+class SnippetPredictResponse(BaseModel):
+    label: str
+    confidence: float
+    probabilities: dict[str, float]
+    branch_probabilities: dict[str, dict[str, float]]   # gcn / dbn / bitcn -> {High,Medium,Low}
+    ensemble_weights: dict[str, float]                  # learned weighted-voting weights
+    structural: dict[str, float]
+    methodology_note: str
+
+
 # ---------------------------------------------------------------------------
 # Endpoints
 # ---------------------------------------------------------------------------
 
 @app.get("/health")
 def health():
-    return {"status": "ok", "model_loaded": not _state.get("demo", False),
-            "demo_mode": _state.get("demo", False)}
+    return {
+        "status": "ok",
+        "model_loaded": not _state.get("demo", False),
+        "demo_mode": _state.get("demo", False),
+        "ecrvr_model_loaded": not _state.get("ecrvr_demo", False),
+        "ecrvr_demo_mode": _state.get("ecrvr_demo", False),
+    }
 
 
 @app.post("/predict", response_model=PredictResponse)
@@ -423,6 +491,79 @@ def _build_explanation(label: str, probs: np.ndarray,
 def batch_predict(req: BatchPredictRequest) -> list[PredictResponse]:
     """Score multiple code samples in one call. Returns results in the same order."""
     return [predict(s) for s in req.samples]
+
+
+@app.post("/predict-snippet", response_model=SnippetPredictResponse)
+def predict_snippet(req: SnippetPredictRequest):
+    """
+    ECRVR-MVEL (Paper 2) — snippet-level readability via a weighted-voting
+    ensemble of GCN, DBN, and Bi-TCN branches over a CodeBERT token sequence.
+
+    This is a freshly-trained, simplified reimplementation (see
+    src/ensemble_model.py docstring for the documented DBN simplification),
+    not the exact published model — accuracy will differ from the paper's
+    98.15%/98.38%. Python-only in this version.
+    """
+    if _state.get("ecrvr_demo"):
+        return SnippetPredictResponse(**_demo_predict_snippet(req.code))
+    if "ecrvr_model" not in _state:
+        raise HTTPException(503, "ECRVR-MVEL model not loaded yet.")
+
+    code = req.code.strip()
+    if not code:
+        raise HTTPException(400, "code must not be empty.")
+
+    model: ECRVRMVEL = _state["ecrvr_model"]
+    embedder: Embedder = _state["embedder"]
+    struct_stats: dict = _state["ecrvr_struct_stats"]
+    max_tokens: int = _state["ecrvr_max_tokens"]
+
+    seq = embedder.encode_sequence(code, max_length=max_tokens)
+    mask = (np.abs(seq).sum(axis=-1) > 0).astype(np.float32)
+
+    raw_struct = _compute_structural(code)
+    struct_vec = (
+        _normalize_structural(raw_struct, struct_stats) if struct_stats
+        else np.zeros(7, dtype=np.float32)
+    )
+
+    with torch.no_grad():
+        seq_t = torch.from_numpy(seq).float().unsqueeze(0)
+        mask_t = torch.from_numpy(mask).float().unsqueeze(0)
+        struct_t = torch.from_numpy(struct_vec).float().unsqueeze(0)
+
+        branch_probs = model.branch_probs(seq_t, struct_t, mask_t)
+        log_probs = model(seq_t, struct_t, mask_t)
+        probs = torch.exp(log_probs).squeeze(0).numpy()
+
+    pred_idx = int(np.argmax(probs))
+    pred_label = LABELS[pred_idx]
+
+    branch_out = {
+        branch: {l: round(float(p), 4) for l, p in zip(LABELS, vals.squeeze(0).numpy())}
+        for branch, vals in branch_probs.items()
+    }
+
+    metrics = _state.get("ecrvr_metrics", {})
+    acc_note = (
+        f"This run's held-out test accuracy was {metrics['accuracy']*100:.1f}%."
+        if metrics.get("accuracy") else ""
+    )
+
+    return SnippetPredictResponse(
+        label=pred_label,
+        confidence=round(float(probs[pred_idx]), 4),
+        probabilities={l: round(float(p), 4) for l, p in zip(LABELS, probs)},
+        branch_probabilities=branch_out,
+        ensemble_weights=model.ensemble_weights(),
+        structural={k: round(float(v), 3) for k, v in raw_struct.items()},
+        methodology_note=(
+            "Live inference from a freshly-trained, simplified reimplementation of "
+            "ECRVR-MVEL (GCN+DBN+BiTCN weighted ensemble) — not the exact published model. "
+            f"{acc_note} The DBN branch is trained end-to-end by backprop rather than "
+            "CD-pretrained RBM layers (documented simplification)."
+        ),
+    )
 
 
 @app.post("/dri", response_model=DriResponse)

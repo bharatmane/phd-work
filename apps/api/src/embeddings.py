@@ -84,6 +84,24 @@ class CodeBERTEmbedder:
             pooled = (summed / counts).squeeze(0).cpu().numpy().astype(np.float32)
             return pooled
 
+    @classmethod
+    def encode_sequence(cls, text: str, max_length: int = 80) -> np.ndarray:
+        """Per-token last_hidden_state (Paper 2, Section 6.2 Stage 2) — needed by
+        the GCN/Bi-TCN branches, which operate over a token sequence rather than
+        a single pooled vector. Padded positions are zeroed via the attention mask.
+        """
+        import torch
+        cls._load()
+        with torch.no_grad():
+            inputs = cls._tokenizer(
+                text, truncation=True, padding="max_length",
+                max_length=max_length, return_tensors="pt"
+            ).to(cls._device)
+            outputs = cls._model(**inputs)
+            mask = inputs["attention_mask"].unsqueeze(-1).float()
+            seq = (outputs.last_hidden_state * mask).squeeze(0).cpu().numpy().astype(np.float32)
+            return seq  # (max_length, 768)
+
 
 # ------------------------------ facade ----------------------------------
 class Embedder:
@@ -114,6 +132,18 @@ class Embedder:
         if self._codebert_ready:
             return CodeBERTEmbedder.encode(" ".join(tokens))
         return self._fallback.encode(tokens)
+
+    def encode_sequence(self, code: str, max_length: int = 80) -> np.ndarray:
+        """Per-token embedding sequence (max_length, 768) for snippet-level models
+        (Paper 2's GCN / Bi-TCN branches). Falls back to a deterministic per-token
+        hash sequence when CodeBERT is unavailable."""
+        if self._codebert_ready:
+            return CodeBERTEmbedder.encode_sequence(code, max_length=max_length)
+        tokens = code.split()[:max_length]
+        seq = np.zeros((max_length, self._fallback.dim), dtype=np.float32)
+        for i, tok in enumerate(tokens):
+            seq[i] = self._fallback._hash_vec(tok)[: self._fallback.dim]
+        return seq
 
 
 if __name__ == "__main__":

@@ -73,8 +73,7 @@
 
 | Metric | Value |
 |--------|-------|
-| Papers published (Scopus) | **2** (ETASR 16(3), 16(4)) |
-| Papers accepted/in production | **1** (P3, ETASR) |
+| Papers published (same Scopus-indexed journal, ETASR) | **3** (16(3), 16(4) ×2) |
 | Papers under submission | **1** (P4, IEEE Access Q1) |
 | Best accuracy — P1 (C++) | 98.42% |
 | Best accuracy — P2 (C++) | 98.38% |
@@ -126,7 +125,7 @@
 **Timeline & completion**
 
 - **Q: Where are you relative to submission?**
-  A: 3 of 4 papers accepted/published in Scopus venues; synopsis drafted. Remaining: P4 results + write-up, and thesis integration. (See §8.)
+  A: 3 of 4 papers published, all in the same Scopus-indexed journal (ETASR); synopsis drafted. Remaining: P4 results + write-up, and thesis integration. (See §8.)
 
 - **Q: What's the risk to on-time submission?**
   A: The only open dependency is P4's experimental run and review turnaround. The pipeline is built, so execution is days, not months; the thesis core does not depend on P4 acceptance.
@@ -148,10 +147,10 @@
 ## 8. Timeline to submission (proposed talking points)
 
 - **Now → 2 weeks:** Run P4 experiments, finalize DRI results, submit to IEEE Access.
-- **Parallel:** Fold P3 (accepted) and finalized parameter validation into the thesis integration chapter.
+- **Parallel:** Fold P3 (now published) and finalized parameter validation into the thesis integration chapter.
 - **Synopsis:** v2 drafted (`docs/annexures/Synopsis-v2.docx`) — ready for committee review.
 - **Remaining chapters:** Cross-paper synthesis + conclusions; introduction/literature already supported by published papers.
-- **Ask the committee:** confirmation that 3 published/accepted Scopus papers + 1 under submission satisfies the publication requirement for submission.
+- **Ask the committee:** confirmation that 3 published papers in the same Scopus-indexed journal + 1 under submission satisfies the publication requirement for submission.
 
 ---
 
@@ -160,7 +159,7 @@
 1. **Title slide** — thesis title, candidate, supervisor, date.
 2. **The problem** — comprehension is the dominant maintenance cost, assessed manually. (1 stat-heavy slide.)
 3. **Thesis statement** — multi-level explainable comprehension framework (the §2 table as a visual).
-4. **Progress headline** — 2 published, 1 accepted, 1 under submission (timeline bar).
+4. **Progress headline** — 3 published (same Scopus-indexed journal), 1 under submission (timeline bar).
 5. **Paper 1 — IRAF-XADL** — pipeline diagram, key result, SHAP example.
 6. **Paper 2 — ECRVR-MVEL** — ensemble diagram, result, LIME example, "validates P1."
 7. **Paper 3 — EESQA-DELMOA** — BAHB→SSNN→AMBOA flow, accuracy + speed bar, BOT-class hook.
@@ -176,14 +175,14 @@
 
 ## 10. Decisions to seek from the committee
 
-- [ ] Confirm publication count (3 Scopus + 1 under submission) meets submission threshold.
+- [ ] Confirm publication count (3 papers, same Scopus-indexed journal + 1 under submission) meets submission threshold.
 - [ ] Approve synopsis v2 / note any required revisions.
 - [ ] Confirm scope: is Paper 4 *required* for submission or a value-add extension?
 - [ ] Agree a target submission month.
 
 ---
 
-*One-line close for the meeting:* "The framework is built, validated across three levels in Scopus venues, and already extending into the AI-code era — I'm asking the committee to confirm scope so I can move to submission."
+*One-line close for the meeting:* "The framework is built, validated across three levels of program comprehension, published across three papers in a Scopus-indexed journal (ETASR), and already extending into the AI-code era via a fourth paper under submission to IEEE Access — I'm asking the committee to confirm scope so I can move to submission."
 
 ---
 
