@@ -259,10 +259,21 @@ ENDSSH
             steps {
                 sh '''
                     echo "Verifying production deployment..."
-                    sleep 5
                     curl -fL https://phd.dgtula.com || exit 1
-                    curl -f https://phd.dgtula.com/api/health || exit 1
-                    echo "✓ Production verification successful"
+
+                    # The API container was just (re)started — CodeBERT can take
+                    # 30-60s to load on a cold start, so poll instead of a fixed sleep.
+                    echo "Waiting for API health check (cold model load can be slow)..."
+                    for i in $(seq 1 24); do
+                        if curl -fs https://phd.dgtula.com/api/health; then
+                            echo ""
+                            echo "✓ Production verification successful"
+                            exit 0
+                        fi
+                        sleep 5
+                    done
+                    echo "API did not become healthy within 120s"
+                    exit 1
                 '''
             }
         }
