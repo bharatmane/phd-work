@@ -184,6 +184,14 @@ function SynopsisContent() {
           <div><span className="text-slate-500">University</span><br /><span className="text-slate-200">Alliance University, Bengaluru</span></div>
           <div><span className="text-slate-500">Year</span><br /><span className="text-slate-200">2026</span></div>
         </div>
+        <a
+          href="/synopsis/Synopsis-Final.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-flex items-center gap-2 rounded-full border border-cyan-500/40 bg-cyan-500/15 px-5 py-2.5 text-sm font-semibold text-cyan-300 hover:bg-cyan-500/25 transition-colors"
+        >
+          Download full synopsis (PDF) ↓
+        </a>
       </div>
 
       {/* 1. Abstract */}
